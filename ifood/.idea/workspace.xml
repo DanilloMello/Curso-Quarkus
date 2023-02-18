@@ -4,32 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExercicioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExercicioRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/ExerciseConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Reps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/resource/ExerciseResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/resource/WorkoutResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeIntensity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/resources/import-test.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resource/ExerciseResourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Localizacao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Prato.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Restaurante.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/PratoResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/RestauranteResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/teste/java/resource/PratoResourceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +306,7 @@
       <workItem from="1676408914580" duration="1669000" />
       <workItem from="1676474781136" duration="717000" />
       <workItem from="1676643719283" duration="10241000" />
-      <workItem from="1676726233122" duration="7708000" />
+      <workItem from="1676726233122" duration="8389000" />
     </task>
     <task id="LOCAL-00001" summary="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
       <created>1675530732400</created>
@@ -339,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675530732400</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Sprint teste - testando 2">
+      <created>1676741483797</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676741483797</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +341,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc" />
+    <MESSAGE value="Sprint teste - testando 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - testando 2" />
   </component>
 </project>
