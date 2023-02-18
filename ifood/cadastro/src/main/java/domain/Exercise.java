@@ -1,7 +1,6 @@
 package domain;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import io.vertx.codegen.annotations.Nullable;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -20,10 +19,10 @@ public class Exercise extends PanacheEntity {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     public Set<ExerciseConfiguration> exerciseConfiguration;
     @CreationTimestamp
-    @Column(name = "dataCriacao")
-    public LocalDateTime dataCriacao;
+    @Column(name = "creationDate")
+    public LocalDateTime creationDate;
     @UpdateTimestamp
-    @Column(name = "dataAtualizacao")
-    public LocalDateTime dataAtualizacao;
+    @Column(name = "updateDate")
+    public LocalDateTime updateDate;
 
 }

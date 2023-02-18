@@ -5,36 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 3">
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/WorkoutRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dto/ExerciseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dto/WorkoutDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/resources/import-dev.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resource/WorkoutResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExercicioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExerciseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExercicioRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExerciseRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dao/RestauranteRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dao/RestauranteRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/WorkoutRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/ConfiguracaoExercicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/ExerciseConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/ExerciseConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Metodo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Treino.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dto/ExercicioDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dto/TreinoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/ExercicioResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/MetodoResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/TreinoResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/RestauranteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/RestauranteServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeIntensity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/import-test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/resources/import-test.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Reps.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Reps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/WorkoutResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resource/WorkoutResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/enums/TypeUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/teste/java/resource/ExerciseResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resource/ExerciseResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/teste/java/resource/WorkoutResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resource/WorkoutResourceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +36,19 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="fa98be85-279c-4737-a818-81a07bae6362" />
+        <option name="url" value="https://github.com/DanilloMello/Curso-Quarkus.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -76,27 +67,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ExpandQuarkusEnvironmentOptionsPanel": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "C:/Trabalho/Dev/Projetos/ifood/cadastro/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ExpandQuarkusEnvironmentOptionsPanel&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Trabalho/Dev/Projetos/ifood/cadastro/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="domain" />
@@ -152,7 +144,7 @@
       <module name="cadastro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tiposEnum.*" />
+          <option name="PATTERN" value="enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -343,6 +335,9 @@
       <workItem from="1676474781136" duration="717000" />
       <workItem from="1676643719283" duration="10241000" />
       <workItem from="1676726233122" duration="9644000" />
+      <workItem from="1676743802123" duration="3809000" />
+      <workItem from="1676748059553" duration="996000" />
+      <workItem from="1676756619571" duration="1526000" />
     </task>
     <task id="LOCAL-00001" summary="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
       <created>1675530732400</created>
@@ -365,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676742537848</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Sprint teste - testando 3">
+      <created>1676743851823</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676743851823</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

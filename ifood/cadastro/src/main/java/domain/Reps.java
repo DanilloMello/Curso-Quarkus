@@ -2,7 +2,7 @@ package domain;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Data;
-import tiposEnum.TypeUnit;
+import enums.TypeUnit;
 
 import javax.persistence.Entity;
 import javax.persistence.MapsId;

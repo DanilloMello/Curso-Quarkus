@@ -1,4 +1,4 @@
-package tiposEnum;
+package enums;
 
 public enum TypeUnit {
     TIME

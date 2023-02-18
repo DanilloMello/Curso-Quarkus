@@ -1,5 +1,7 @@
 package resource;
 
+import config.CadastroTestLifecycleManager;
+import io.quarkus.test.common.QuarkusTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.Test;
 
