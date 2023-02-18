@@ -8,6 +8,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Data
@@ -16,6 +17,8 @@ public class Exercise extends PanacheEntity {
     public String name;
     @ManyToOne
     public Workout workout;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    public Set<ExerciseConfiguration> exerciseConfiguration;
     @CreationTimestamp
     @Column(name = "dataCriacao")
     public LocalDateTime dataCriacao;

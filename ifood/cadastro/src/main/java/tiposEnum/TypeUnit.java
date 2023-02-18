@@ -1,5 +1,5 @@
 package tiposEnum;
 
 public enum TypeUnit {
-    TIME,
+    TIME
 }

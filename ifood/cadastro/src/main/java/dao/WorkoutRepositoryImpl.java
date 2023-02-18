@@ -5,6 +5,6 @@ import javax.transaction.Transactional;
 
 @ApplicationScoped
 @Transactional
-public class ExercicioRepositoryImpl implements ExercicioRepository {
+public class WorkoutRepositoryImpl implements WorkoutRepository {
 
 }

@@ -4,8 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 2">
+    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 3">
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/WorkoutRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dto/ExerciseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dto/WorkoutDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/resources/import-dev.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resource/WorkoutResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExercicioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExerciseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExercicioRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExerciseRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dao/RestauranteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dao/RestauranteRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/WorkoutRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/ConfiguracaoExercicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercicio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/ExerciseConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/ExerciseConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Metodo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Treino.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dto/ExercicioDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dto/TreinoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/ExercicioResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/MetodoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/TreinoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/RestauranteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/RestauranteServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeIntensity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/import-test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/resources/import-test.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,31 +76,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ExpandQuarkusEnvironmentOptionsPanel&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ExpandQuarkusEnvironmentOptionsPanel": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "C:/Trabalho/Dev/Projetos/ifood/cadastro/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="domain" />
       <recent name="dto" />
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\main\resources" />
+      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\main\java\dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\teste\resources\datasets" />
@@ -86,6 +120,8 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="resource" />
+      <recent name="services" />
+      <recent name="dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -95,64 +131,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ExerciseResourceTest">
-    <configuration name="ExerciseResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cadastro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tiposEnum.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resource.ExerciseResourceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExerciseResourceTest.shouldRetrieveAllPratos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cadastro" />
-      <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resource.ExerciseResourceTest" />
-      <option name="METHOD_NAME" value="shouldRetrieveAllPratos" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExerciseResourceTest.shouldRetrievePratoNomePrecoDTO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cadastro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="resource.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resource.ExerciseResourceTest" />
-      <option name="METHOD_NAME" value="shouldRetrievePratoNomePrecoDTO" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExerciseResourceTest.shouldRetrievePratoRestauranteLocalizacaoDTO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cadastro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="resource.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resource.ExerciseResourceTest" />
-      <option name="METHOD_NAME" value="shouldRetrievePratoRestauranteLocalizacaoDTO" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.WorkoutResourceTest">
     <configuration name="PratoResourceTest.shouldRetrieveAllPratos (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cadastro" />
       <extension name="coverage">
@@ -164,6 +143,63 @@
       <option name="PACKAGE_NAME" value="com.github.danillomello.ifood.resource" />
       <option name="MAIN_CLASS_NAME" value="com.github.danillomello.ifood.resource.PratoResourceTest" />
       <option name="METHOD_NAME" value="shouldRetrieveAllPratos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkoutResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tiposEnum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="resource" />
+      <option name="MAIN_CLASS_NAME" value="resource.WorkoutResourceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkoutResourceTest.shouldRetrieveAllPratos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastro" />
+      <option name="PACKAGE_NAME" value="resource" />
+      <option name="MAIN_CLASS_NAME" value="resource.WorkoutResourceTest" />
+      <option name="METHOD_NAME" value="shouldRetrieveAllPratos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkoutResourceTest.shouldRetrievePratoNomePrecoDTO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="resource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="resource" />
+      <option name="MAIN_CLASS_NAME" value="resource.WorkoutResourceTest" />
+      <option name="METHOD_NAME" value="shouldRetrievePratoNomePrecoDTO" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkoutResourceTest.shouldRetrievePratoRestauranteLocalizacaoDTO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="resource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="resource" />
+      <option name="MAIN_CLASS_NAME" value="resource.WorkoutResourceTest" />
+      <option name="METHOD_NAME" value="shouldRetrievePratoRestauranteLocalizacaoDTO" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,11 +300,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrieveAllPratos" />
-        <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrievePratoRestauranteLocalizacaoDTO" />
-        <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrievePratoNomePrecoDTO" />
+        <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrieveAllPratos" />
+        <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrievePratoRestauranteLocalizacaoDTO" />
+        <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrievePratoNomePrecoDTO" />
         <item itemvalue="JUnit.PratoResourceTest.shouldRetrieveAllPratos (1)" />
-        <item itemvalue="JUnit.ExerciseResourceTest" />
+        <item itemvalue="JUnit.WorkoutResourceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +342,7 @@
       <workItem from="1676408914580" duration="1669000" />
       <workItem from="1676474781136" duration="717000" />
       <workItem from="1676643719283" duration="10241000" />
-      <workItem from="1676726233122" duration="8389000" />
+      <workItem from="1676726233122" duration="9644000" />
     </task>
     <task id="LOCAL-00001" summary="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
       <created>1675530732400</created>
@@ -322,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676741483797</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sprint teste - testando 2">
+      <created>1676742537848</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676742537848</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +385,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc" />
     <MESSAGE value="Sprint teste - testando 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - testando 2" />
+    <MESSAGE value="Sprint teste - testando 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - testando 3" />
   </component>
 </project>

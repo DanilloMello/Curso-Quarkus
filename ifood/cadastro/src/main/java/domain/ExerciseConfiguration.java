@@ -2,7 +2,6 @@ package domain;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Data;
-import tiposEnum.TypeIntensity;
 
 import javax.persistence.*;
 import java.time.Duration;
@@ -12,7 +11,6 @@ import java.time.Duration;
 @Table(name = "Exercise_Configuration")
 public class ExerciseConfiguration extends PanacheEntity {
     public Integer sets;
-    public TypeIntensity intensity;
     public String cadence;
     public String method;
     public Double weight;
