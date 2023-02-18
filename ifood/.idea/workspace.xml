@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
-      <change beforePath="$PROJECT_DIR$/../CursoQuarkus" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoQuarkus" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExercicioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExercicioRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/ExerciseConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Reps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/resource/ExerciseResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/resource/WorkoutResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeIntensity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/tiposEnum/TypeUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/resources/import-test.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resource/ExerciseResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Localizacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Prato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Restaurante.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/PratoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/RestauranteResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/teste/java/resource/PratoResourceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +39,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -56,17 +87,23 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="domain" />
+      <recent name="dto" />
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\teste\resources\datasets" />
       <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\teste\java" />
       <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\teste" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="domain" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="resource" />
@@ -82,8 +119,33 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PratoResourceTest.shouldRetrieveAllPratos">
-    <configuration name="PratoResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ExerciseResourceTest">
+    <configuration name="ExerciseResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tiposEnum.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="resource" />
+      <option name="MAIN_CLASS_NAME" value="resource.ExerciseResourceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExerciseResourceTest.shouldRetrieveAllPratos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastro" />
+      <option name="PACKAGE_NAME" value="resource" />
+      <option name="MAIN_CLASS_NAME" value="resource.ExerciseResourceTest" />
+      <option name="METHOD_NAME" value="shouldRetrieveAllPratos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExerciseResourceTest.shouldRetrievePratoNomePrecoDTO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cadastro" />
       <extension name="coverage">
         <pattern>
@@ -92,8 +154,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resource.PratoResourceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="resource.ExerciseResourceTest" />
+      <option name="METHOD_NAME" value="shouldRetrievePratoNomePrecoDTO" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExerciseResourceTest.shouldRetrievePratoRestauranteLocalizacaoDTO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="resource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="resource" />
+      <option name="MAIN_CLASS_NAME" value="resource.ExerciseResourceTest" />
+      <option name="METHOD_NAME" value="shouldRetrievePratoRestauranteLocalizacaoDTO" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,16 +187,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.github.danillomello.ifood.resource" />
       <option name="MAIN_CLASS_NAME" value="com.github.danillomello.ifood.resource.PratoResourceTest" />
-      <option name="METHOD_NAME" value="shouldRetrieveAllPratos" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PratoResourceTest.shouldRetrieveAllPratos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cadastro" />
-      <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resource.PratoResourceTest" />
       <option name="METHOD_NAME" value="shouldRetrieveAllPratos" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -219,9 +288,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PratoResourceTest.shouldRetrieveAllPratos" />
+        <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrieveAllPratos" />
+        <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrievePratoRestauranteLocalizacaoDTO" />
+        <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrievePratoNomePrecoDTO" />
         <item itemvalue="JUnit.PratoResourceTest.shouldRetrieveAllPratos (1)" />
-        <item itemvalue="JUnit.PratoResourceTest" />
+        <item itemvalue="JUnit.ExerciseResourceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +315,22 @@
       <workItem from="1675006030268" duration="7817000" />
       <workItem from="1675131491263" duration="500000" />
       <workItem from="1675296121884" duration="913000" />
-      <workItem from="1675529878445" duration="947000" />
+      <workItem from="1675529878445" duration="1577000" />
+      <workItem from="1675626688980" duration="597000" />
+      <workItem from="1675686361637" duration="12679000" />
+      <workItem from="1675869247268" duration="14266000" />
+      <workItem from="1675966417079" duration="4085000" />
+      <workItem from="1676062066976" duration="596000" />
+      <workItem from="1676122637376" duration="7214000" />
+      <workItem from="1676224345995" duration="3544000" />
+      <workItem from="1676233010294" duration="1223000" />
+      <workItem from="1676247940293" duration="1890000" />
+      <workItem from="1676292434510" duration="19912000" />
+      <workItem from="1676340040989" duration="4665000" />
+      <workItem from="1676408914580" duration="1669000" />
+      <workItem from="1676474781136" duration="717000" />
+      <workItem from="1676643719283" duration="10241000" />
+      <workItem from="1676726233122" duration="7708000" />
     </task>
     <task id="LOCAL-00001" summary="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
       <created>1675530732400</created>
