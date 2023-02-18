@@ -19,7 +19,7 @@ public class PratoResourceTest {
         .when()
             .get("/pratos")
         .then()
-            .body("nome", is(hasItem("teste")))
+            .body("nome", is(hasItem("Arroz")))
             .body("$", hasSize(1))
         ;
     }
