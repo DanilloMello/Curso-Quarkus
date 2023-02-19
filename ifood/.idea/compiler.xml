@@ -12,8 +12,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ifood" />
         <module name="pedido" />
-        <module name="cadastro" />
         <module name="marketplace" />
+      </profile>
+      <profile name="Annotation profile for cadastro" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.3.Final/mapstruct-processor-1.5.3.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.3.Final/mapstruct-1.5.3.Final.jar" />
+        </processorPath>
+        <module name="cadastro" />
       </profile>
     </annotationProcessing>
   </component>
