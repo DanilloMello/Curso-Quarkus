@@ -7,12 +7,13 @@ import java.time.Duration;
 @Data
 @RegisterForReflection
 public class ExerciseConfigurationDTO {
-    Integer sets;
-    String cadence;
     String method;
+    Integer sets;
+    RepsDTO reps;
+    String cadence;
     Double weight;
+    Integer rangeOfMotion;
     Duration restBetweenSets;
     Duration restBetweenReps;
     Duration restBetweenExercises;
-    RepsDTO reps;
 }

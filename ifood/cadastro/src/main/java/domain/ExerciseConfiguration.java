@@ -14,6 +14,7 @@ public class ExerciseConfiguration extends PanacheEntity {
     public String cadence;
     public String method;
     public Double weight;
+    public Integer rangeOfMotion;
     public Duration restBetweenSets;
     public Duration restBetweenReps;
     public Duration restBetweenExercises;

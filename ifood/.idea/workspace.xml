@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 3">
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dto/ExerciseConfigurationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dto/RepsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 4">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Reps.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Reps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dto/ExerciseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/dto/ExerciseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dto/WorkoutDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/dto/WorkoutDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/ExerciseConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/ExerciseConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dto/ExerciseConfigurationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/dto/ExerciseConfigurationDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676743851823</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Sprint teste - testando 4">
+      <created>1676767887172</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676767887172</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,6 +392,7 @@
     <MESSAGE value="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc" />
     <MESSAGE value="Sprint teste - testando 2" />
     <MESSAGE value="Sprint teste - testando 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - testando 3" />
+    <MESSAGE value="Sprint teste - testando 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - testando 4" />
   </component>
 </project>
