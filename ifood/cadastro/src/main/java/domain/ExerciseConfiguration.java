@@ -3,7 +3,10 @@ package domain;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.time.Duration;
 
 @Entity
@@ -18,9 +21,6 @@ public class ExerciseConfiguration extends PanacheEntity {
     public Duration restBetweenSets;
     public Duration restBetweenReps;
     public Duration restBetweenExercises;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    public Reps reps;
     @ManyToOne(fetch = FetchType.LAZY)
     public Exercise exercise;
-
 }

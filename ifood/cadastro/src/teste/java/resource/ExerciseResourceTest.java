@@ -27,9 +27,9 @@ public class ExerciseResourceTest {
         String teste =
                 given()
                         .when()
-                        .get("/pratos/cadastro")
+                        .get("/exercises")
                         .then()
-                        .body("$", hasSize(1))
+                        .body("", hasSize(1))
                         .extract().asString()
                 ;
         System.out.println(teste);

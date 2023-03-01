@@ -1,8 +1,8 @@
 package resource;
 
-import config.CadastroTestLifecycleManager;
-import io.quarkus.test.common.QuarkusTestResource;
+import config.QuarkusTestProfileImpl;
 import io.quarkus.test.junit.QuarkusTest;
+import io.quarkus.test.junit.TestProfile;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
@@ -10,6 +10,7 @@ import static org.hamcrest.Matchers.hasSize;
 
 @QuarkusTest
 //@QuarkusTestResource(CadastroTestLifecycleManager.class)
+@TestProfile(QuarkusTestProfileImpl.class)
 public class WorkoutResourceTest {
 
 //    @Test
@@ -27,9 +28,9 @@ public class WorkoutResourceTest {
         String teste =
                 given()
                         .when()
-                        .get("/pratos/cadastro")
+                        .get("/workouts")
                         .then()
-                        .body("$", hasSize(1))
+                        .body("", hasSize(1))
                         .extract().asString()
                 ;
         System.out.println(teste);
