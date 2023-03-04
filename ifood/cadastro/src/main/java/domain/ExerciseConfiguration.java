@@ -1,19 +1,29 @@
 package domain;
 
+import domain.embedded.Reps;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.OverridesAttribute;
 import java.time.Duration;
 
 @Entity
 @Data
-@Table(name = "Exercise_Configuration")
-public class ExerciseConfiguration extends PanacheEntity {
+@Table(name = "exercise_configuration")
+public class ExerciseConfiguration extends PanacheEntityBase {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "exercise_configuration_sequence")
+    @SequenceGenerator(name = "exercise_configuration_sequence", sequenceName = "exercise_configuration_seq", allocationSize = 1)
+    public Long id;
     public Integer sets;
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride( name = "repetition", column = @Column(name = "reps_repetition")),
+            @AttributeOverride( name = "runtime", column = @Column(name = "reps_runtime"))
+    })
+    public Reps reps;
     public String cadence;
     public String method;
     public Double weight;

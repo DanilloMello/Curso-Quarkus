@@ -1,15 +1,17 @@
-package resource;
+package resources;
 
 import domain.Workout;
-import dto.WorkoutDTO;
+import domain.dto.WorkoutDTO;
 //import mapper.WorkoutMapper;
+import mappers.WorkoutMapper;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
+import services.WorkoutService;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
 import java.net.URI;
 import java.util.List;
 
@@ -19,23 +21,19 @@ import static javax.ws.rs.core.Response.Status.*;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class WorkoutResource {
-//    @Inject
-//    WorkoutMapper workoutMapper;
+    @Inject
+    WorkoutService workoutService;
+
     @GET
     public List<Workout> listAll() {
-        return Workout.listAll();
+        return workoutService.listAll();
     }
-//    @POST
-//    public Response create(@RequestBody WorkoutDTO workoutDto) {
-//        Workout workout = workoutMapper.toWorkout(workoutDto);
-//        Workout.persist(workout);
-//        return workout.isPersistent() ?
-//                Response.created(URI.create("/workouts/" + workout.id)).build()
-//                : Response.status(BAD_REQUEST).build();
-//    }
+    @POST
+    public Response create(@RequestBody WorkoutDTO workoutDto) {
+        return workoutService.create(workoutDto);
+    }
     @PUT
-    @Path("/{id}")
-    public Response update(@PathParam("id") Long id, @RequestBody WorkoutDTO workoutDTO) {
+    public Response update(@RequestBody WorkoutDTO workoutDTO) {
         return Workout
                 .findByIdOptional(workoutDTO.getId())
                 .map(

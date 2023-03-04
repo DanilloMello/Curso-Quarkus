@@ -1,13 +1,19 @@
 
-h
-8cadastro/src/main/java/dto/ExerciseConfigurationDTO.java,f\0\f0cea14b3ec419e31382b2599e684d7ced94df42
-[
-+cadastro/src/main/java/dto/ExerciseDTO.java,3\f\3f63b4d5130a7752c1ad91550f7edb9c76f7437d
-W
-'cadastro/src/main/java/dto/RepsDTO.java,d\0\d06654d916195367cbd3aed78a66c70841d8c9b2
 d
 4cadastro/src/main/java/services/ExerciseService.java,7\0\7006634dc22665889799ef479f5ffed7432a633e
 Z
 *cadastro/src/main/java/enums/TypeUnit.java,f\f\ff5a48e6d64e02cd0344870a4eae2308f3a173c8
-g
-7cadastro/src/main/java/services/WorkoutServiceImpl.java,c\9\c9522da3b84124cd5b24cb07c44654d134393dc5
+p
+@cadastro/src/teste/java/config/CadastroTestLifecycleManager.java,f\1\f11c260262416a3e0da609dff27b1d47cf7be738
+Z
+*cadastro/src/main/docker/Dockerfile.native,b\2\b2cee37e982f33389ada0c85430ca39f485ca48b
+`
+0cadastro/src/main/docker/Dockerfile.native-micro,2\3\234f5b70fc6d50f2bd8152fcb73bf21f72342f3c
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+F
+cadastro/.dockerignore,7\a\7af571fd84d0f19cd67e081baf7bdb14b9724722
+C
+cadastro/.gitignore,a\e\aec6074f348817c83578a577bd4c64f11d640680
+e
+5cadastro/src/main/java/dao/WorkoutRepositoryImpl.java,e\a\eabc1525352edb397d670a56f48e91ca31aece4f
