@@ -1,0 +1,9 @@
+
+|
+java:S3252"ZUse static access with "io.quarkus.hibernate.orm.panache.PanacheEntityBase" for "listAll".(éªŞÌıÿÿÿÿ8§¬ôè0
+w
+java:S3252"ZUse static access with "io.quarkus.hibernate.orm.panache.PanacheEntityBase" for "persist".(ì­´í8±¬ôè0
+€
+java:S3252("cUse static access with "io.quarkus.hibernate.orm.panache.PanacheEntityBase" for "findByIdOptional".(ãëŞö8À¬ôè0
+Z
+java:S1128"=Remove this unused import 'javax.ws.rs.core.Response.Status'.(ºÍÓÑ8É¬ôè0

@@ -1,0 +1,721 @@
+Index: cadastro/src/teste/java/resource/WorkoutResourceTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package resource;\r\n\r\nimport config.CadastroTestLifecycleManager;\r\nimport io.quarkus.test.common.QuarkusTestResource;\r\nimport io.quarkus.test.junit.QuarkusTest;\r\nimport org.junit.Test;\r\n\r\nimport static io.restassured.RestAssured.given;\r\nimport static org.hamcrest.Matchers.hasSize;\r\n\r\n@QuarkusTest\r\n//@QuarkusTestResource(CadastroTestLifecycleManager.class)\r\npublic class WorkoutResourceTest {\r\n\r\n//    @Test\r\n//    public void shouldRetrieveAllPratos() {\r\n//\r\n//        given()\r\n//        .when()\r\n//                .get()\r\n//        ;\r\n//\r\n//    }\r\n\r\n    @Test\r\n    public void shouldRetrievePratosCadastro() {\r\n        String teste =\r\n                given()\r\n                        .when()\r\n                        .get(\"/pratos/cadastro\")\r\n                        .then()\r\n                        .body(\"$\", hasSize(1))\r\n                        .extract().asString()\r\n                ;\r\n        System.out.println(teste);\r\n    }\r\n\r\n    @Test\r\n    public void shouldRetrievePratosNomePreco() {\r\n        String teste =\r\n                given()\r\n                        .when()\r\n                        .get(\"/pratos/nome-preco\")\r\n                        .then()\r\n                        .body(\"$\", hasSize(8))\r\n                        .extract().asString()\r\n                ;\r\n        System.out.println(teste);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/teste/java/resource/WorkoutResourceTest.java b/cadastro/src/teste/java/resource/WorkoutResourceTest.java
+--- a/cadastro/src/teste/java/resource/WorkoutResourceTest.java	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ b/cadastro/src/teste/java/resource/WorkoutResourceTest.java	(date 1677446057366)
+@@ -12,39 +12,25 @@
+ //@QuarkusTestResource(CadastroTestLifecycleManager.class)
+ public class WorkoutResourceTest {
+ 
+-//    @Test
+-//    public void shouldRetrieveAllPratos() {
+-//
+-//        given()
+-//        .when()
+-//                .get()
+-//        ;
+-//
+-//    }
+-
+     @Test
+-    public void shouldRetrievePratosCadastro() {
+-        String teste =
+-                given()
+-                        .when()
+-                        .get("/pratos/cadastro")
+-                        .then()
+-                        .body("$", hasSize(1))
+-                        .extract().asString()
+-                ;
+-        System.out.println(teste);
++    public void shouldRetrieveAllWorkouts() {
++        System.out.println(given()
++                .when()
++                .get("/workouts")
++                .then()
++                .body("$", hasSize(2))
++                .extract().asString())
++        ;
+     }
+-
+     @Test
+-    public void shouldRetrievePratosNomePreco() {
+-        String teste =
+-                given()
+-                        .when()
+-                        .get("/pratos/nome-preco")
+-                        .then()
+-                        .body("$", hasSize(8))
+-                        .extract().asString()
+-                ;
+-        System.out.println(teste);
++    public void shouldCreateAWorkout() {
++        System.out.println(given()
++                .when()
++                .post("/workouts")
++                .then()
++                .body("$", hasSize(2))
++                .extract().asString())
++        ;
+     }
++
+ }
+\ No newline at end of file
+Index: cadastro/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>%dev.quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/postgres\r\n%dev.quarkus.datasource.jdbc.driver=org.postgresql.Driver\r\n%dev.quarkus.datasource.username=cadastro\r\n%dev.quarkus.datasource.password=cadastro\r\n%dev.quarkus.hibernate-orm.dialet=org.hibernate.dialect.PostgreSQL10Dialect\r\n%dev.quarkus.hibernate-orm.database.generation=update\r\n%dev.quarkus.http.test-timeout=10s\r\n%dev.quarkus.hibernate-orm.sql-load-script=import-dev.sql\r\n\r\n%test.quarkus.hibernate-orm.database.generation=drop-and-create\r\n%test.quarkus.hibernate-orm.sql-load-script=import-test.sql\r\n%test.quarkus.http.test-timeout=10s
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/cadastro/src/main/resources/application.properties b/cadastro/src/main/resources/application.properties
+--- a/cadastro/src/main/resources/application.properties	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ b/cadastro/src/main/resources/application.properties	(date 1677439040570)
+@@ -1,12 +1,14 @@
+-%dev.quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/postgres
+-%dev.quarkus.datasource.jdbc.driver=org.postgresql.Driver
+-%dev.quarkus.datasource.username=cadastro
+-%dev.quarkus.datasource.password=cadastro
+-%dev.quarkus.hibernate-orm.dialet=org.hibernate.dialect.PostgreSQL10Dialect
+-%dev.quarkus.hibernate-orm.database.generation=update
+-%dev.quarkus.http.test-timeout=10s
+-%dev.quarkus.hibernate-orm.sql-load-script=import-dev.sql
++%prod.quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/postgres
++%prod.quarkus.datasource.username=cadastro
++%prod.quarkus.datasource.password=cadastro
++%prod.quarkus.datasource.jdbc.driver=org.postgresql.Driver
++%prod.quarkus.hibernate-orm.dialet=org.hibernate.dialect.PostgreSQL10Dialect
++%prod.quarkus.hibernate-orm.database.generation=update
++%prod.quarkus.http.test-timeout=10s
+ 
+-%test.quarkus.hibernate-orm.database.generation=drop-and-create
+-%test.quarkus.hibernate-orm.sql-load-script=import-test.sql
+-%test.quarkus.http.test-timeout=10s
+\ No newline at end of file
++%dev.quarkus.config.profile.parent=no-prod
++%test.quarkus.config.profile.parent=no-prod
++
++%no-prod.quarkus.datasource.devservices.port=54321
++%no-prod.quarkus.hibernate-orm.database.generation=drop-and-create
++%no-prod.quarkus.hibernate-orm.sql-load-script=import-no-prod.sql
+Index: cadastro/src/main/resources/import-dev.sql
+===================================================================
+diff --git a/cadastro/src/main/resources/import-dev.sql b/cadastro/src/main/resources/import-dev.sql
+deleted file mode 100644
+--- a/cadastro/src/main/resources/import-dev.sql	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ /dev/null	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
+@@ -1,2 +0,0 @@
+-
+-
+Index: cadastro/src/main/resources/import-test.sql
+===================================================================
+diff --git a/cadastro/src/main/resources/import-test.sql b/cadastro/src/main/resources/import-test.sql
+deleted file mode 100644
+--- a/cadastro/src/main/resources/import-test.sql	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ /dev/null	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
+@@ -1,2 +0,0 @@
+-
+-
+Index: cadastro/src/main/java/domain/Teste.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/main/java/domain/Teste.java b/cadastro/src/main/java/domain/Teste.java
+new file mode 100644
+--- /dev/null	(date 1677888629068)
++++ b/cadastro/src/main/java/domain/Teste.java	(date 1677888629068)
+@@ -0,0 +1,18 @@
++package domain;
++
++import io.quarkus.hibernate.orm.panache.PanacheEntity;
++import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
++import lombok.Data;
++
++import javax.persistence.*;
++
++@Entity
++@Data
++@Table(name = "teste")
++public class Teste extends PanacheEntityBase {
++    @Id
++    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "teste_seq" )
++    @SequenceGenerator(name = "teste_seq", sequenceName = "teste_seq")
++    public Long id;
++    public String nome;
++}
+Index: cadastro/src/main/java/domain/Reps.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package domain;\r\n\r\nimport io.quarkus.hibernate.orm.panache.PanacheEntity;\r\nimport io.vertx.codegen.annotations.Nullable;\r\nimport lombok.Data;\r\nimport enums.TypeUnit;\r\n\r\nimport javax.persistence.Entity;\r\nimport javax.persistence.MapsId;\r\nimport javax.persistence.OneToOne;\r\nimport javax.validation.constraints.Null;\r\nimport java.time.Duration;\r\n\r\n@Data\r\n@Entity\r\npublic class Reps extends PanacheEntity {\r\n    @OneToOne\r\n    @MapsId\r\n    public ExerciseConfiguration exerciseConfiguration;\r\n    @Nullable\r\n    public Integer reps;\r\n    @Nullable\r\n    public Duration time;\r\n\r\n    public Reps(Duration time) {\r\n        this.reps = null;\r\n        this.time = time;\r\n    }\r\n    public Reps(Integer reps) {\r\n        this.reps = reps;\r\n        this.time = null;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/main/java/domain/Reps.java b/cadastro/src/main/java/domain/Reps.java
+--- a/cadastro/src/main/java/domain/Reps.java	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ b/cadastro/src/main/java/domain/Reps.java	(date 1677442887252)
+@@ -6,6 +6,7 @@
+ import enums.TypeUnit;
+ 
+ import javax.persistence.Entity;
++import javax.persistence.Id;
+ import javax.persistence.MapsId;
+ import javax.persistence.OneToOne;
+ import javax.validation.constraints.Null;
+@@ -15,13 +16,13 @@
+ @Entity
+ public class Reps extends PanacheEntity {
+     @OneToOne
+-    @MapsId
++    @MapsId("id")
+     public ExerciseConfiguration exerciseConfiguration;
+-    @Nullable
+     public Integer reps;
+-    @Nullable
++
+     public Duration time;
+-
++    public Reps() {
++    }
+     public Reps(Duration time) {
+         this.reps = null;
+         this.time = time;
+@@ -30,4 +31,6 @@
+         this.reps = reps;
+         this.time = null;
+     }
++
++
+ }
+Index: cadastro/src/main/java/domain/Exercise.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package domain;\r\n\r\nimport io.quarkus.hibernate.orm.panache.PanacheEntity;\r\nimport lombok.Data;\r\nimport org.hibernate.annotations.CreationTimestamp;\r\nimport org.hibernate.annotations.UpdateTimestamp;\r\n\r\nimport javax.persistence.*;\r\nimport java.time.LocalDateTime;\r\nimport java.util.Set;\r\n\r\n@Entity\r\n@Data\r\n@Table(name = \"exercise\")\r\npublic class Exercise extends PanacheEntity {\r\n    public String name;\r\n    @ManyToOne\r\n    public Workout workout;\r\n    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)\r\n    public Set<ExerciseConfiguration> exerciseConfiguration;\r\n    @CreationTimestamp\r\n    @Column(name = \"creationDate\")\r\n    public LocalDateTime creationDate;\r\n    @UpdateTimestamp\r\n    @Column(name = \"updateDate\")\r\n    public LocalDateTime updateDate;\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/main/java/domain/Exercise.java b/cadastro/src/main/java/domain/Exercise.java
+--- a/cadastro/src/main/java/domain/Exercise.java	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ b/cadastro/src/main/java/domain/Exercise.java	(date 1677441662114)
+@@ -15,9 +15,7 @@
+ public class Exercise extends PanacheEntity {
+     public String name;
+     @ManyToOne
+-    public Workout workout;
+-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+-    public Set<ExerciseConfiguration> exerciseConfiguration;
++    Workout workout;
+     @CreationTimestamp
+     @Column(name = "creationDate")
+     public LocalDateTime creationDate;
+Index: cadastro/src/main/java/domain/ExerciseConfiguration.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package domain;\r\n\r\nimport io.quarkus.hibernate.orm.panache.PanacheEntity;\r\nimport lombok.Data;\r\n\r\nimport javax.persistence.*;\r\nimport java.time.Duration;\r\n\r\n@Entity\r\n@Data\r\n@Table(name = \"Exercise_Configuration\")\r\npublic class ExerciseConfiguration extends PanacheEntity {\r\n    public Integer sets;\r\n    public String cadence;\r\n    public String method;\r\n    public Double weight;\r\n    public Integer rangeOfMotion;\r\n    public Duration restBetweenSets;\r\n    public Duration restBetweenReps;\r\n    public Duration restBetweenExercises;\r\n    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)\r\n    public Reps reps;\r\n    @ManyToOne(fetch = FetchType.LAZY)\r\n    public Exercise exercise;\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/main/java/domain/ExerciseConfiguration.java b/cadastro/src/main/java/domain/ExerciseConfiguration.java
+--- a/cadastro/src/main/java/domain/ExerciseConfiguration.java	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ b/cadastro/src/main/java/domain/ExerciseConfiguration.java	(date 1677441910581)
+@@ -18,9 +18,6 @@
+     public Duration restBetweenSets;
+     public Duration restBetweenReps;
+     public Duration restBetweenExercises;
+-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+-    public Reps reps;
+     @ManyToOne(fetch = FetchType.LAZY)
+     public Exercise exercise;
+-
+ }
+Index: cadastro/src/teste/java/resource/ExerciseResourceTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package resource;\r\n\r\nimport config.CadastroTestLifecycleManager;\r\nimport io.quarkus.test.common.QuarkusTestResource;\r\nimport io.quarkus.test.junit.QuarkusTest;\r\nimport org.junit.Test;\r\n\r\nimport static io.restassured.RestAssured.given;\r\nimport static org.hamcrest.Matchers.hasSize;\r\n\r\n@QuarkusTest\r\n//@QuarkusTestResource(CadastroTestLifecycleManager.class)\r\npublic class ExerciseResourceTest {\r\n\r\n//    @Test\r\n//    public void shouldRetrieveAllPratos() {\r\n//\r\n//        given()\r\n//        .when()\r\n//                .get()\r\n//        ;\r\n//\r\n//    }\r\n\r\n    @Test\r\n    public void shouldRetrievePratosCadastro() {\r\n        String teste =\r\n                given()\r\n                        .when()\r\n                        .get(\"/pratos/cadastro\")\r\n                        .then()\r\n                        .body(\"$\", hasSize(1))\r\n                        .extract().asString()\r\n                ;\r\n        System.out.println(teste);\r\n    }\r\n\r\n    @Test\r\n    public void shouldRetrievePratosNomePreco() {\r\n        String teste =\r\n                given()\r\n                        .when()\r\n                        .get(\"/pratos/nome-preco\")\r\n                        .then()\r\n                        .body(\"$\", hasSize(8))\r\n                        .extract().asString()\r\n                ;\r\n        System.out.println(teste);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/teste/java/resource/ExerciseResourceTest.java b/cadastro/src/teste/java/resource/ExerciseResourceTest.java
+--- a/cadastro/src/teste/java/resource/ExerciseResourceTest.java	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ b/cadastro/src/teste/java/resource/ExerciseResourceTest.java	(date 1677435595790)
+@@ -11,17 +11,6 @@
+ @QuarkusTest
+ //@QuarkusTestResource(CadastroTestLifecycleManager.class)
+ public class ExerciseResourceTest {
+-
+-//    @Test
+-//    public void shouldRetrieveAllPratos() {
+-//
+-//        given()
+-//        .when()
+-//                .get()
+-//        ;
+-//
+-//    }
+-
+     @Test
+     public void shouldRetrievePratosCadastro() {
+         String teste =
+@@ -29,12 +18,11 @@
+                         .when()
+                         .get("/pratos/cadastro")
+                         .then()
+-                        .body("$", hasSize(1))
++                        .body("nome", hasSize(1))
+                         .extract().asString()
+                 ;
+         System.out.println(teste);
+     }
+-
+     @Test
+     public void shouldRetrievePratosNomePreco() {
+         String teste =
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <excludeFromCompile>\r\n      <directory url=\"file://$PROJECT_DIR$/src/main/resources/archetype-resources\" includeSubdirectories=\"true\" />\r\n    </excludeFromCompile>\r\n    <annotationProcessing>\r\n      <profile default=\"true\" name=\"Default\" enabled=\"true\" />\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"ifood\" />\r\n        <module name=\"pedido\" />\r\n        <module name=\"marketplace\" />\r\n      </profile>\r\n      <profile name=\"Annotation profile for cadastro\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <processorPath useClasspath=\"false\">\r\n          <entry name=\"$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.3.Final/mapstruct-processor-1.5.3.Final.jar\" />\r\n          <entry name=\"$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.3.Final/mapstruct-1.5.3.Final.jar\" />\r\n        </processorPath>\r\n        <module name=\"cadastro\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n  </component>\r\n  <component name=\"JavacSettings\">\r\n    <option name=\"ADDITIONAL_OPTIONS_OVERRIDE\">\r\n      <module name=\"cadastro\" options=\"-parameters -parameters\" />\r\n      <module name=\"marketplace\" options=\"-parameters\" />\r\n      <module name=\"pedido\" options=\"-parameters\" />\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ b/.idea/compiler.xml	(date 1677443277778)
+@@ -10,9 +10,9 @@
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
+-        <module name="ifood" />
+         <module name="pedido" />
+         <module name="marketplace" />
++        <module name="ifood" />
+       </profile>
+       <profile name="Annotation profile for cadastro" enabled="true">
+         <sourceOutputDir name="target/generated-sources/annotations" />
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"cded1e22-55f8-4cff-9863-3b4d8fcae317\" name=\"Changes\" comment=\"Sprint teste - testando 4\">\r\n      <change afterPath=\"$PROJECT_DIR$/cadastro/src/main/java/mapper/WorkoutMapper.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/cadastro/src/main/java/resource/WorkoutResource.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/cadastro/src/main/java/resource/WorkoutResource.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"Interface\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$/..\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"fa98be85-279c-4737-a818-81a07bae6362\" />\r\n        <option name=\"url\" value=\"https://github.com/DanilloMello/Curso-Quarkus.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2KYeARAE7RxJwYe2h3LFpOLDciT\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ExpandQuarkusEnvironmentOptionsPanel&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Danillo/Projetos/Curso-Quarkus/ifood&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"dto\" />\r\n      <recent name=\"domain\" />\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Trabalho\\Dev\\Projetos\\ifood\\cadastro\\src\\main\\resources\" />\r\n      <recent name=\"C:\\Trabalho\\Dev\\Projetos\\ifood\\cadastro\\src\\main\\java\\dao\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Trabalho\\Dev\\Projetos\\ifood\\cadastro\\src\\teste\\resources\\datasets\" />\r\n      <recent name=\"C:\\Trabalho\\Dev\\Projetos\\ifood\\cadastro\\src\\teste\\java\" />\r\n      <recent name=\"C:\\Trabalho\\Dev\\Projetos\\ifood\\cadastro\\src\\teste\" />\r\n    </key>\r\n    <key name=\"ExtractSuperBase.RECENT_KEYS\">\r\n      <recent name=\"domain\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"resource\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"resource\" />\r\n      <recent name=\"services\" />\r\n      <recent name=\"dao\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"configurationTypes\">\r\n      <set>\r\n        <option value=\"QuarkusRunConfigurationType\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.WorkoutResourceTest\">\r\n    <configuration name=\"PratoResourceTest.shouldRetrieveAllPratos (1)\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"cadastro\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.github.danillomello.ifood.resource.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.github.danillomello.ifood.resource\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.github.danillomello.ifood.resource.PratoResourceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"shouldRetrieveAllPratos\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"WorkoutResourceTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"cadastro\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"enums.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"resource\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"resource.WorkoutResourceTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"WorkoutResourceTest.shouldRetrieveAllPratos\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"cadastro\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"resource\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"resource.WorkoutResourceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"shouldRetrieveAllPratos\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"WorkoutResourceTest.shouldRetrievePratoNomePrecoDTO\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"cadastro\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"resource.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"resource\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"resource.WorkoutResourceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"shouldRetrievePratoNomePrecoDTO\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"WorkoutResourceTest.shouldRetrievePratoRestauranteLocalizacaoDTO\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"cadastro\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"resource.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"resource\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"resource.WorkoutResourceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"shouldRetrievePratoRestauranteLocalizacaoDTO\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"cadastro\" type=\"QuarkusRunConfigurationType\" factoryName=\"Quarkus\" nameIsGenerated=\"true\">\r\n      <module name=\"cadastro\" />\r\n      <QsMavenRunConfiguration>\r\n        <MavenSettings>\r\n          <option name=\"myGeneralSettings\" />\r\n          <option name=\"myRunnerSettings\" />\r\n          <option name=\"myRunnerParameters\">\r\n            <MavenRunnerParameters>\r\n              <option name=\"profiles\">\r\n                <set />\r\n              </option>\r\n              <option name=\"goals\">\r\n                <list>\r\n                  <option value=\"quarkus:dev\" />\r\n                </list>\r\n              </option>\r\n              <option name=\"pomFileName\" value=\"pom.xml\" />\r\n              <option name=\"profilesMap\">\r\n                <map />\r\n              </option>\r\n              <option name=\"resolveToWorkspace\" value=\"false\" />\r\n              <option name=\"workingDirPath\" value=\"$PROJECT_DIR$/cadastro\" />\r\n            </MavenRunnerParameters>\r\n          </option>\r\n        </MavenSettings>\r\n        <targetMavenLocalRepo />\r\n      </QsMavenRunConfiguration>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"marketplace\" type=\"QuarkusRunConfigurationType\" factoryName=\"Quarkus\" nameIsGenerated=\"true\">\r\n      <module name=\"marketplace\" />\r\n      <QsMavenRunConfiguration>\r\n        <MavenSettings>\r\n          <option name=\"myGeneralSettings\" />\r\n          <option name=\"myRunnerSettings\" />\r\n          <option name=\"myRunnerParameters\">\r\n            <MavenRunnerParameters>\r\n              <option name=\"profiles\">\r\n                <set />\r\n              </option>\r\n              <option name=\"goals\">\r\n                <list>\r\n                  <option value=\"quarkus:dev\" />\r\n                </list>\r\n              </option>\r\n              <option name=\"pomFileName\" value=\"pom.xml\" />\r\n              <option name=\"profilesMap\">\r\n                <map />\r\n              </option>\r\n              <option name=\"resolveToWorkspace\" value=\"false\" />\r\n              <option name=\"workingDirPath\" value=\"$PROJECT_DIR$/marketplace\" />\r\n            </MavenRunnerParameters>\r\n          </option>\r\n        </MavenSettings>\r\n        <targetMavenLocalRepo />\r\n      </QsMavenRunConfiguration>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"pedido\" type=\"QuarkusRunConfigurationType\" factoryName=\"Quarkus\" nameIsGenerated=\"true\">\r\n      <module name=\"pedido\" />\r\n      <QsMavenRunConfiguration>\r\n        <MavenSettings>\r\n          <option name=\"myGeneralSettings\" />\r\n          <option name=\"myRunnerSettings\" />\r\n          <option name=\"myRunnerParameters\">\r\n            <MavenRunnerParameters>\r\n              <option name=\"profiles\">\r\n                <set />\r\n              </option>\r\n              <option name=\"goals\">\r\n                <list>\r\n                  <option value=\"quarkus:dev\" />\r\n                </list>\r\n              </option>\r\n              <option name=\"pomFileName\" value=\"pom.xml\" />\r\n              <option name=\"profilesMap\">\r\n                <map />\r\n              </option>\r\n              <option name=\"resolveToWorkspace\" value=\"false\" />\r\n              <option name=\"workingDirPath\" value=\"$PROJECT_DIR$/pedido\" />\r\n            </MavenRunnerParameters>\r\n          </option>\r\n        </MavenSettings>\r\n        <targetMavenLocalRepo />\r\n      </QsMavenRunConfiguration>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.WorkoutResourceTest.shouldRetrieveAllPratos\" />\r\n        <item itemvalue=\"JUnit.WorkoutResourceTest.shouldRetrievePratoRestauranteLocalizacaoDTO\" />\r\n        <item itemvalue=\"JUnit.WorkoutResourceTest.shouldRetrievePratoNomePrecoDTO\" />\r\n        <item itemvalue=\"JUnit.PratoResourceTest.shouldRetrieveAllPratos (1)\" />\r\n        <item itemvalue=\"JUnit.WorkoutResourceTest\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"cded1e22-55f8-4cff-9863-3b4d8fcae317\" name=\"Changes\" comment=\"\" />\r\n      <created>1674155800593</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1674155800593</updated>\r\n      <workItem from=\"1674155802104\" duration=\"8059000\" />\r\n      <workItem from=\"1674218837836\" duration=\"6642000\" />\r\n      <workItem from=\"1674493478837\" duration=\"10150000\" />\r\n      <workItem from=\"1674705896140\" duration=\"741000\" />\r\n      <workItem from=\"1674746820452\" duration=\"5404000\" />\r\n      <workItem from=\"1674820861291\" duration=\"4806000\" />\r\n      <workItem from=\"1674859593571\" duration=\"2656000\" />\r\n      <workItem from=\"1674944188605\" duration=\"611000\" />\r\n      <workItem from=\"1675006030268\" duration=\"7817000\" />\r\n      <workItem from=\"1675131491263\" duration=\"500000\" />\r\n      <workItem from=\"1675296121884\" duration=\"913000\" />\r\n      <workItem from=\"1675529878445\" duration=\"1577000\" />\r\n      <workItem from=\"1675626688980\" duration=\"597000\" />\r\n      <workItem from=\"1675686361637\" duration=\"12679000\" />\r\n      <workItem from=\"1675869247268\" duration=\"14266000\" />\r\n      <workItem from=\"1675966417079\" duration=\"4085000\" />\r\n      <workItem from=\"1676062066976\" duration=\"596000\" />\r\n      <workItem from=\"1676122637376\" duration=\"7214000\" />\r\n      <workItem from=\"1676224345995\" duration=\"3544000\" />\r\n      <workItem from=\"1676233010294\" duration=\"1223000\" />\r\n      <workItem from=\"1676247940293\" duration=\"1890000\" />\r\n      <workItem from=\"1676292434510\" duration=\"19912000\" />\r\n      <workItem from=\"1676340040989\" duration=\"4665000\" />\r\n      <workItem from=\"1676408914580\" duration=\"1669000\" />\r\n      <workItem from=\"1676474781136\" duration=\"717000\" />\r\n      <workItem from=\"1676643719283\" duration=\"10241000\" />\r\n      <workItem from=\"1676726233122\" duration=\"9644000\" />\r\n      <workItem from=\"1676743802123\" duration=\"3809000\" />\r\n      <workItem from=\"1676748059553\" duration=\"996000\" />\r\n      <workItem from=\"1676756619571\" duration=\"1526000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc\">\r\n      <created>1675530732400</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675530732400</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Sprint teste - testando 2\">\r\n      <created>1676741483797</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676741483797</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Sprint teste - testando 2\">\r\n      <created>1676742537848</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676742537848</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Sprint teste - testando 3\">\r\n      <created>1676743851823</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676743851823</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Sprint teste - testando 4\">\r\n      <created>1676767887172</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676767887172</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Sprint teste - testando 4\">\r\n      <created>1676768816848</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676768816848</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc\" />\r\n    <MESSAGE value=\"Sprint teste - testando 2\" />\r\n    <MESSAGE value=\"Sprint teste - testando 3\" />\r\n    <MESSAGE value=\"Sprint teste - testando 4\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Sprint teste - testando 4\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ b/.idea/workspace.xml	(date 1677887399614)
+@@ -4,11 +4,24 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 4">
+-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/mapper/WorkoutMapper.java" afterDir="false" />
++    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 5">
++      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Teste.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dto/TesteDTO.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/resource/TesteResource.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/cadastro/src/main/resources/import-no-prod.sql" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resource/TesteResourceTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resource/WorkoutResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resource/WorkoutResource.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercise.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/ExerciseConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/ExerciseConfiguration.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Reps.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Reps.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/import-dev.sql" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/import-test.sql" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/cadastro/src/teste/java/resource/ExerciseResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resource/ExerciseResourceTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/cadastro/src/teste/java/resource/WorkoutResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resource/WorkoutResourceTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -19,8 +32,8 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="Enum" />
+-        <option value="Class" />
+         <option value="Interface" />
++        <option value="Class" />
+       </list>
+     </option>
+   </component>
+@@ -107,6 +120,7 @@
+       <recent name="resource" />
+     </key>
+     <key name="CopyClassDialog.RECENTS_KEY">
++      <recent name="dto" />
+       <recent name="resource" />
+       <recent name="services" />
+       <recent name="dao" />
+@@ -119,43 +133,44 @@
+       </set>
+     </option>
+   </component>
+-  <component name="RunManager" selected="JUnit.WorkoutResourceTest">
+-    <configuration name="PratoResourceTest.shouldRetrieveAllPratos (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="JUnit.WorkoutResourceTest.shouldRetrieveAllWorkouts">
++    <configuration name="TesteResourceTest.shouldRetrieveTeste" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="cadastro" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="com.github.danillomello.ifood.resource.*" />
++          <option name="PATTERN" value="resource.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="PACKAGE_NAME" value="com.github.danillomello.ifood.resource" />
+-      <option name="MAIN_CLASS_NAME" value="com.github.danillomello.ifood.resource.PratoResourceTest" />
+-      <option name="METHOD_NAME" value="shouldRetrieveAllPratos" />
++      <option name="PACKAGE_NAME" value="resource" />
++      <option name="MAIN_CLASS_NAME" value="resource.TesteResourceTest" />
++      <option name="METHOD_NAME" value="shouldRetrieveTeste" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="WorkoutResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="WorkoutResourceTest.shouldRetrieveAllPratos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="cadastro" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="enums.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+       <option name="PACKAGE_NAME" value="resource" />
+       <option name="MAIN_CLASS_NAME" value="resource.WorkoutResourceTest" />
+-      <option name="TEST_OBJECT" value="class" />
++      <option name="METHOD_NAME" value="shouldRetrieveAllPratos" />
++      <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="WorkoutResourceTest.shouldRetrieveAllPratos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="WorkoutResourceTest.shouldRetrieveAllWorkouts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="cadastro" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="resource.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
+       <option name="PACKAGE_NAME" value="resource" />
+       <option name="MAIN_CLASS_NAME" value="resource.WorkoutResourceTest" />
+-      <option name="METHOD_NAME" value="shouldRetrieveAllPratos" />
++      <option name="METHOD_NAME" value="shouldRetrieveAllWorkouts" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -288,11 +303,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrieveAllWorkouts" />
++        <item itemvalue="JUnit.TesteResourceTest.shouldRetrieveTeste" />
+         <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrieveAllPratos" />
+         <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrievePratoRestauranteLocalizacaoDTO" />
+         <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrievePratoNomePrecoDTO" />
+-        <item itemvalue="JUnit.PratoResourceTest.shouldRetrieveAllPratos (1)" />
+-        <item itemvalue="JUnit.WorkoutResourceTest" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -377,7 +392,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1676768816848</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="Sprint teste - testando 5">
++      <created>1676834717202</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1676834717202</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -399,6 +421,7 @@
+     <MESSAGE value="Sprint teste - testando 2" />
+     <MESSAGE value="Sprint teste - testando 3" />
+     <MESSAGE value="Sprint teste - testando 4" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - testando 4" />
++    <MESSAGE value="Sprint teste - testando 5" />
++    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - testando 5" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: cadastro/src/main/java/dto/TesteDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/main/java/dto/TesteDTO.java b/cadastro/src/main/java/dto/TesteDTO.java
+new file mode 100644
+--- /dev/null	(date 1677886272784)
++++ b/cadastro/src/main/java/dto/TesteDTO.java	(date 1677886272784)
+@@ -0,0 +1,14 @@
++package dto;
++
++import io.quarkus.hibernate.orm.panache.PanacheEntity;
++import io.quarkus.runtime.annotations.RegisterForReflection;
++import lombok.Data;
++
++import javax.persistence.Entity;
++import javax.persistence.Table;
++
++@Data
++@RegisterForReflection
++public class TesteDTO {
++    public String nome;
++}
+Index: cadastro/src/main/java/domain/Workout.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package domain;\r\n\r\nimport io.quarkus.hibernate.orm.panache.PanacheEntity;\r\nimport lombok.Data;\r\nimport org.hibernate.annotations.CreationTimestamp;\r\nimport org.hibernate.annotations.UpdateTimestamp;\r\n\r\nimport javax.persistence.*;\r\nimport java.time.LocalDateTime;\r\nimport java.util.Date;\r\nimport java.util.Set;\r\n\r\n@Entity\r\n@Data\r\n@Table(name = \"workout\")\r\npublic class Workout extends PanacheEntity {\r\n    public String nome;\r\n    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)\r\n    public Set<Exercise> exercise;\r\n    @CreationTimestamp\r\n    @Column(name = \"creationDate\")\r\n    public LocalDateTime creationDate;\r\n    @UpdateTimestamp\r\n    @Column(name = \"updateDate\")\r\n    public LocalDateTime updateDate;\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/main/java/domain/Workout.java b/cadastro/src/main/java/domain/Workout.java
+--- a/cadastro/src/main/java/domain/Workout.java	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ b/cadastro/src/main/java/domain/Workout.java	(date 1677439333642)
+@@ -15,8 +15,6 @@
+ @Table(name = "workout")
+ public class Workout extends PanacheEntity {
+     public String nome;
+-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+-    public Set<Exercise> exercise;
+     @CreationTimestamp
+     @Column(name = "creationDate")
+     public LocalDateTime creationDate;
+Index: cadastro/src/teste/java/resource/TesteResourceTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/teste/java/resource/TesteResourceTest.java b/cadastro/src/teste/java/resource/TesteResourceTest.java
+new file mode 100644
+--- /dev/null	(date 1677437212911)
++++ b/cadastro/src/teste/java/resource/TesteResourceTest.java	(date 1677437212911)
+@@ -0,0 +1,25 @@
++package resource;
++
++import io.quarkus.test.junit.QuarkusTest;
++import org.junit.Test;
++
++import static io.restassured.RestAssured.given;
++import static org.hamcrest.Matchers.hasSize;
++import static org.hamcrest.Matchers.hasValue;
++
++@QuarkusTest
++//@QuarkusTestResource(CadastroTestLifecycleManager.class)
++public class TesteResourceTest {
++    @Test
++    public void shouldRetrieveTeste() {
++        String teste =
++                given()
++                        .when()
++                        .get("/testes")
++                        .then()
++                        .body("", hasSize(1))
++                        .extract().asString()
++                ;
++        System.out.println(teste);
++    }
++}
+\ No newline at end of file
+Index: cadastro/src/main/java/resource/TesteResource.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/main/java/resource/TesteResource.java b/cadastro/src/main/java/resource/TesteResource.java
+new file mode 100644
+--- /dev/null	(date 1677886938598)
++++ b/cadastro/src/main/java/resource/TesteResource.java	(date 1677886938598)
+@@ -0,0 +1,34 @@
++package resource;
++
++import domain.Teste;
++import dto.TesteDTO;
++import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
++
++import javax.net.ssl.SSLEngineResult;
++import javax.transaction.Transactional;
++import javax.ws.rs.*;
++import javax.ws.rs.core.MediaType;
++import javax.ws.rs.core.Response;
++import java.util.List;
++import java.util.stream.Collectors;
++
++@Path("/testes")
++@Produces(MediaType.APPLICATION_JSON)
++@Consumes(MediaType.APPLICATION_JSON)
++public class TesteResource {
++    @GET
++    @Transactional
++    public List<Teste> listAll(){
++        List<Teste> testes = Teste.listAll();
++        return testes;
++    }
++    @POST
++    @Transactional
++    public Teste create(@RequestBody TesteDTO dto){
++        Teste teste1 = new Teste();
++        teste1.nome = dto.nome;
++        Teste.persist(teste1);
++        return teste1;
++    }
++
++}
+Index: cadastro/src/main/resources/import-no-prod.sql
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cadastro/src/main/resources/import-no-prod.sql b/cadastro/src/main/resources/import-no-prod.sql
+new file mode 100644
+--- /dev/null	(date 1677888502873)
++++ b/cadastro/src/main/resources/import-no-prod.sql	(date 1677888502873)
+@@ -0,0 +1,72 @@
++
++INSERT INTO teste (id, nome) VALUES(nextval('teste_seq'),'Teste');
++
++---- Treino 1
++--
++--INSERT INTO workout
++--(id, creationdate, nome, updatedate)
++--VALUES(1, '2023-02-26 16:56:00', 'Treino A', '2023-02-26 16:56:00');
++--
++--    -- Exercício 1
++--
++--INSERT INTO exercise
++--(id, creationdate, "name", updatedate, workout_id)
++--VALUES(1, '2023-02-26 16:56:00', 'Supino Reto', '2023-02-26 16:56:00', 1);
++--
++--INSERT INTO exercise_configuration
++--(id, cadence, "method", rangeofmotion, restbetweenexercises, restbetweenreps, restbetweensets, "sets", weight, exercise_id)
++--VALUES(1, '2020', 'Execução Dinâmica', 100, 60, 0, 60, 3, 60, 1);
++--
++--INSERT INTO reps
++--(id, reps, "time", exerciseconfiguration_id)
++--VALUES(1,30, 30, 1);
++--
++---- Treino 2
++--
++--INSERT INTO workout
++--(id, creationdate, nome, updatedate)
++--VALUES(2, '2023-02-26 16:56:00', 'Treino B', '2023-02-26 16:56:00');
++--
++--    -- Exercicio 1
++--INSERT INTO exercise
++--(id, creationdate, "name", updatedate, workout_id)
++--VALUES(2, '2023-02-26 16:56:00', 'Supino Reto', '2023-02-26 16:56:00', 2);
++--
++--INSERT INTO exercise_configuration
++--(id, cadence, "method", rangeofmotion, restbetweenexercises, restbetweenreps, restbetweensets, "sets", weight, exercise_id)
++--VALUES(2, '2020', 'Execução Dinâmica', 100, 60, 0, 60, 3, 60, 2);
++--
++--INSERT INTO reps
++--(id, reps, "time", exerciseconfiguration_id)
++--VALUES(2, 12, null, 2);
++--
++--    -- Exercicio 2
++--INSERT INTO exercise
++--(id, creationdate, "name", updatedate, workout_id)
++--VALUES(3, '2023-02-26 16:56:00', 'Supino Inclinado', '2023-02-26 16:56:00', 2);
++--
++--INSERT INTO exercise_configuration
++--(id, cadence, "method", rangeofmotion, restbetweenexercises, restbetweenreps, restbetweensets, "sets", weight, exercise_id)
++--VALUES(3, '2020', 'Execução Dinâmica', 100, 60, 0, 60, 3, 60, 3);
++--
++--INSERT INTO reps
++--(id, reps, "time", exerciseconfiguration_id)
++--VALUES(3, 12, null, 3);
++--
++--    -- Exercício 3
++--
++--INSERT INTO exercise
++--(id, creationdate, "name", updatedate, workout_id)
++--VALUES(4, '2023-02-26 16:56:00', 'Paralela Livre', '2023-02-26 16:56:00', 2);
++--
++--INSERT INTO exercise_configuration
++--(id, cadence, "method", rangeofmotion, restbetweenexercises, restbetweenreps, restbetweensets, "sets", weight, exercise_id)
++--VALUES(4, '2020', 'Execução Dinâmica', 100, 60, 0, 60, 3, 60, 4);
++--
++--INSERT INTO reps
++--(id, reps, "time", exerciseconfiguration_id)
++--VALUES(4, 12, null, 4);
++
++
++
++
+Index: .idea/sonarlint/issuestore/index.pb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/sonarlint/issuestore/index.pb b/.idea/sonarlint/issuestore/index.pb
+--- a/.idea/sonarlint/issuestore/index.pb	(revision 7384426cffa1e920c3ef8870a03b5787f37d425e)
++++ b/.idea/sonarlint/issuestore/index.pb	(date 1677888654310)
+@@ -1,0 +1,51 @@
++
++@
++cadastro/pom.xml,b\b\bbfb052d96eb04906f18950465116e788b24834f
++S
++#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
++Z
++*cadastro/src/main/java/domain/Workout.java,5\c\5cb4c77916ad80317e0734c11ac06ecd690eb269
++e
++5cadastro/src/main/java/resource/ExerciseResource.java,3\3\33970afadc99a0e674457eeab88bb502f3ace44a
++W
++'cadastro/src/main/java/domain/Reps.java,7\f\7f5d2f4b0e86950f3cb75385220df06213d55ad3
++h
++8cadastro/src/main/java/domain/ExerciseConfiguration.java,9\5\951e8ce0a5707eba7efb5e1b7c44abc5c1c94bd8
++[
+++cadastro/src/main/java/domain/Exercise.java,e\5\e560014e503a37f1213107ce01a7b6f315a93b13
++c
++3cadastro/src/main/java/services/WorkoutService.java,e\a\ea32f6f6bb18693996b8bcd562309b8a31310542
++h
++8cadastro/src/main/java/services/ExerciseServiceImpl.java,1\a\1a5567a66b984d5436a4b4c0315bbe8850f744bd
++d
++4cadastro/src/main/java/services/ExerciseService.java,7\0\7006634dc22665889799ef479f5ffed7432a633e
++Z
++*cadastro/src/main/java/enums/TypeUnit.java,f\f\ff5a48e6d64e02cd0344870a4eae2308f3a173c8
++h
++8cadastro/src/main/java/dto/ExerciseConfigurationDTO.java,f\0\f0cea14b3ec419e31382b2599e684d7ced94df42
++g
++7cadastro/src/teste/java/resource/TesteResourceTest.java,a\7\a7a043d820c0c701b3b3706cb9c070de5b640036
++j
++:cadastro/src/teste/java/resource/ExerciseResourceTest.java,6\a\6a18cca9a21745604e4b8dd8693093ec9e9ef3f3
++d
++4cadastro/src/main/java/resource/WorkoutResource.java,a\3\a3095ed238f2eeb6e3268a7cfb7aff5840867b16
++`
++0cadastro/src/main/java/mapper/WorkoutMapper.java,2\a\2a063b9fbdcd31a3e8afcf43432ebb881b438b39
++i
++9cadastro/src/teste/java/resource/WorkoutResourceTest.java,e\7\e7a86f2ac066666829e6f2092d900a528ecde60b
++g
++7cadastro/src/main/java/services/WorkoutServiceImpl.java,c\9\c9522da3b84124cd5b24cb07c44654d134393dc5
++p
++@cadastro/src/teste/java/config/CadastroTestLifecycleManager.java,f\1\f11c260262416a3e0da609dff27b1d47cf7be738
++W
++'cadastro/src/main/java/dto/RepsDTO.java,d\0\d06654d916195367cbd3aed78a66c70841d8c9b2
++[
+++cadastro/src/main/java/dto/ExerciseDTO.java,3\f\3f63b4d5130a7752c1ad91550f7edb9c76f7437d
++Z
++*cadastro/src/main/java/dto/WorkoutDTO.java,0\b\0b65bb5177954208f238cf22a877a8c308365ef3
++X
++(cadastro/src/main/java/domain/Teste.java,b\b\bbd998c03d056122a5847a88caf3ef0f27681042
++X
++(cadastro/src/main/java/dto/TesteDTO.java,5\4\54cdf0c0392ed40dbc74dd34a5147f0cd8d246a7
++b
++2cadastro/src/main/java/resource/TesteResource.java,2\d\2d7e09a83073de8ee6fe49a5bca32cb6d620679c
+\ No newline at end of file

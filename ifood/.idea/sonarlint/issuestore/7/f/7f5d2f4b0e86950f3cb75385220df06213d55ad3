@@ -1,0 +1,15 @@
+
+r
+java:S1104"PMake reps a static final constant or non-public and provide accessors if needed.(´“×†øÿÿÿÿ8²’‡ûè0
+r
+java:S1104"PMake time a static final constant or non-public and provide accessors if needed.(ÓÇéÜûÿÿÿÿ8³’‡ûè0
+5
+java:S1700"Rename field "reps"(´“×†øÿÿÿÿ8¯áúè0
+_
+java:S1128"BRemove this unused import 'io.vertx.codegen.annotations.Nullable'.(¥¿°ˆ8É’‡ûè0
+H
+java:S1128"+Remove this unused import 'enums.TypeUnit'.(Ê¡Ú8…™áúè0
+N
+java:S1128	"1Remove this unused import 'javax.persistence.Id'.(ş¹ŞÜ8“¯áúè0
+[
+java:S1128">Remove this unused import 'javax.validation.constraints.Null'.(ã¥˜8…™áúè0
