@@ -1,22 +1,26 @@
 package domain;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.GenericGenerators;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.tuple.GeneratedValueGeneration;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.Set;
 
 @Entity
 @Data
 @Table(name = "workout")
-public class Workout extends PanacheEntity {
+public class Workout extends PanacheEntityBase {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "workout_sequence")
+    @SequenceGenerator(name = "workout_sequence", sequenceName = "workout_seq", allocationSize = 1)
+    public Long id;
+
     public String nome;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    public Set<Exercise> exercise;
     @CreationTimestamp
     @Column(name = "creationDate")
     public LocalDateTime creationDate;

@@ -1,4 +1,4 @@
-package dto;
+package domain.dto;
 
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import lombok.Data;

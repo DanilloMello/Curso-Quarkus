@@ -1,9 +1,8 @@
-package mapper;
+package mappers;
 
 import domain.Workout;
-import dto.WorkoutDTO;
+import domain.dto.WorkoutDTO;
 import org.mapstruct.Mapper;
-
 @Mapper(componentModel = "cdi")
 public interface WorkoutMapper {
     Workout toWorkout(WorkoutDTO dto);

@@ -1,5 +1,12 @@
 package services;
 
-public interface WorkoutService {
+import domain.Workout;
+import domain.dto.WorkoutDTO;
 
+import javax.ws.rs.core.Response;
+import java.util.List;
+
+public interface WorkoutService {
+    List<Workout> listAll();
+    Response create(WorkoutDTO workout);
 }
