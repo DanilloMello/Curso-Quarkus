@@ -11,5 +11,5 @@ public interface ExerciseConfigurationService {
     Response create(ExerciseConfigurationDTO dto);
     Response update(ExerciseConfigurationDTO dto);
 
-
+    Response delete(Long id);
 }

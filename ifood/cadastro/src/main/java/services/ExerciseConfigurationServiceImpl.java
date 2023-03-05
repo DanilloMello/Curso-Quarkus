@@ -1,5 +1,6 @@
 package services;
 
+import domain.Exercise;
 import domain.ExerciseConfiguration;
 import domain.Workout;
 import domain.dto.ExerciseConfigurationDTO;
@@ -10,8 +11,10 @@ import javax.inject.Inject;
 import javax.ws.rs.core.Response;
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
+import static javax.ws.rs.core.Response.Status.NOT_FOUND;
 
 @ApplicationScoped
 public class ExerciseConfigurationServiceImpl implements ExerciseConfigurationService {
@@ -43,5 +46,12 @@ public class ExerciseConfigurationServiceImpl implements ExerciseConfigurationSe
                                     Response.status(BAD_REQUEST).build();
                         })
                 .orElse(Response.status(BAD_REQUEST).build());
+    }
+    @Override
+    public Response delete(Long id) {
+        Optional<ExerciseConfiguration> exerciseConfiguration = ExerciseConfiguration.findByIdOptional(id);
+        return exerciseConfiguration.isPresent() ?
+                ExerciseConfiguration.deleteById(exerciseConfiguration) ? Response.ok().build() : Response.status(NOT_FOUND).build()
+                : Response.status(NOT_FOUND).build();
     }
 }

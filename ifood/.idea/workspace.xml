@@ -4,34 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 10">
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExerciseConfigurationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExerciseConfigurationRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/mappers/ExerciseConfigurationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/mappers/ExerciseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseConfigurationResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseConfigurationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseConfigurationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/7006634dc22665889799ef479f5ffed7432a633e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExerciseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/dao/ExerciseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/dto/ExerciseConfigurationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/dto/ExerciseConfigurationDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/dto/ExerciseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/dto/ExerciseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/dto/WorkoutDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/dto/WorkoutDTO.java" afterDir="false" />
+    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - Crud GET, POST, PUT">
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseConfigurationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseConfigurationResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseConfigurationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseConfigurationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseConfigurationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseConfigurationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/teste/java/resources/ExerciseConfigurationResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resources/ExerciseConfigurationResourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/teste/java/resources/ExerciseResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resources/ExerciseResourceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/teste/java/resources/WorkoutResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/teste/java/resources/WorkoutResourceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,6 +386,7 @@
       <workItem from="1677894950926" duration="861000" />
       <workItem from="1677942020829" duration="117000" />
       <workItem from="1677943615443" duration="4260000" />
+      <workItem from="1678033749743" duration="2280000" />
     </task>
     <task id="LOCAL-00001" summary="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
       <created>1675530732400</created>
@@ -461,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677942141680</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Sprint teste - Crud GET, POST, PUT">
+      <created>1678033968408</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678033968408</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +475,8 @@
     <MESSAGE value="Sprint teste - testando 4" />
     <MESSAGE value="Sprint teste - testando 6" />
     <MESSAGE value="Sprint teste - testando 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - testando 10" />
+    <MESSAGE value="Sprint teste - Crud GET, POST, PUT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - Crud GET, POST, PUT" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

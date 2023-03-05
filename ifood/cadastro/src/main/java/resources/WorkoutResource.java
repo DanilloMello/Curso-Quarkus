@@ -29,4 +29,7 @@ public class WorkoutResource {
     public Response update(@RequestBody WorkoutDTO workoutDTO) {
        return workoutService.update(workoutDTO);
     }
+    @DELETE
+    @Path("{id}")
+    public Response delete(@PathParam("id") Long id){ return workoutService.delete(id); }
 }

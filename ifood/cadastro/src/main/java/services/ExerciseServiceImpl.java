@@ -10,8 +10,10 @@ import javax.inject.Inject;
 import javax.ws.rs.core.Response;
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
+import static javax.ws.rs.core.Response.Status.NOT_FOUND;
 
 @ApplicationScoped
 public class ExerciseServiceImpl implements ExerciseService {
@@ -43,5 +45,12 @@ public class ExerciseServiceImpl implements ExerciseService {
                                     Response.status(BAD_REQUEST).build();
                         })
                 .orElse(Response.status(BAD_REQUEST).build());
+    }
+    @Override
+    public Response delete(Long id) {
+        Optional<Exercise> exercise = Exercise.findByIdOptional(id);
+        return exercise.isPresent() ?
+                Exercise.deleteById(exercise) ? Response.ok().build() : Response.status(NOT_FOUND).build()
+                : Response.status(NOT_FOUND).build();
     }
 }

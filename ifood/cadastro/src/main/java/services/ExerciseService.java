@@ -10,5 +10,5 @@ public interface ExerciseService {
     List<Exercise> listAll();
     Response create(ExerciseDTO dto);
     Response update(ExerciseDTO dto);
-
+    Response delete(Long id);
 }
