@@ -8,8 +8,6 @@ import static org.hamcrest.Matchers.hasSize;
 
 @QuarkusTest
 public class WorkoutResourceTest {
-
-
     @Test
     public void shouldRetrieveWorkouts() {
         System.out.println(given()

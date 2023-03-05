@@ -2,6 +2,7 @@ package services;
 
 import domain.Workout;
 import domain.dto.WorkoutDTO;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import mappers.WorkoutMapper;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -29,6 +30,22 @@ public class WorkoutServiceImpl implements WorkoutService {
         return workout.isPersistent() ?
                 Response.created(URI.create("/workouts/" + workout.id)).build()
                 : Response.status(BAD_REQUEST).build();
+    }
+
+    @Override
+    public Response update(WorkoutDTO workoutDTO) {
+        return Workout
+                .findByIdOptional(workoutDTO.getId())
+                .map(
+                        w -> {
+                            Workout workout = (Workout) w;
+                            workout.setNome(workoutDTO.getNome());
+                            workout.persist();
+                            return workout.isPersistent() ?
+                                    Response.ok(workout).build() :
+                                    Response.status(BAD_REQUEST).build();
+                        })
+                .orElse(Response.status(BAD_REQUEST).build());
     }
 
 }
