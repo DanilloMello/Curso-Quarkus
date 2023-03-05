@@ -10,19 +10,7 @@ import java.util.List;
 public class WorkoutDTO {
     Long id;
     String nome;
-    List<ExerciseDTO> exercises;
     LocalDateTime creationDate;
     LocalDateTime updateDate;
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 }

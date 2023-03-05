@@ -7,10 +7,9 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.hasSize;
 
 @QuarkusTest
-//@QuarkusTestResource(CadastroTestLifecycleManager.class)
 public class ExerciseResourceTest {
     @Test
-    public void shouldRetrieveWorkouts() {
+    public void shouldRetrieveExercises() {
         System.out.println(given()
                 .when()
                 .get("/exercises")

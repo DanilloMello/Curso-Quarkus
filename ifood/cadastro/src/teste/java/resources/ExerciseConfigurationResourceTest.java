@@ -6,13 +6,12 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 
 @QuarkusTest
-//@QuarkusTestResource(CadastroTestLifecycleManager.class)
 public class ExerciseConfigurationResourceTest {
     @Test
-    public void shouldRetrieveWorkouts() {
+    public void shouldRetrieveExerciseConfigurations() {
         System.out.println(given()
                 .when()
-                .get("/exercises")
+                .get("/exercise-configurations")
                 .then()
                 .extract().asString());
     }

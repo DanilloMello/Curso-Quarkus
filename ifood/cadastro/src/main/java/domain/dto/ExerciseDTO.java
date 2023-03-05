@@ -1,12 +1,17 @@
 package domain.dto;
 
+import domain.Workout;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import lombok.Data;
 
-import java.util.List;
+import java.time.LocalDateTime;
 @Data
 @RegisterForReflection
 public class ExerciseDTO {
-    String name;
-    List<ExerciseConfigurationDTO> exerciseConfiguration;
+    public Long id;
+    public String name;
+
+    public Workout workout;
+    public LocalDateTime creationDate;
+    public LocalDateTime updateDate;
 }
