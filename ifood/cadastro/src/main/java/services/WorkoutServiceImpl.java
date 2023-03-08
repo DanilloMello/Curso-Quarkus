@@ -42,7 +42,7 @@ public class WorkoutServiceImpl implements WorkoutService {
                 .map(
                         w -> {
                             Workout workout = (Workout) w;
-                            workout.setNome(workoutDTO.getNome());
+                            workout.setNome(workoutDTO.getName());
                             workout.persist();
                             return workout.isPersistent() ?
                                     Response.ok(workout).build() :

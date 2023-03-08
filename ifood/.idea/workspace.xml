@@ -4,6 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 5">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5cb4c77916ad80317e0734c11ac06ecd690eb269" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/7006634dc22665889799ef479f5ffed7432a633e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/951e8ce0a5707eba7efb5e1b7c44abc5c1c94bd8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/dto/WorkoutDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/dto/WorkoutDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" afterDir="false" />
     <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - Crud GET, POST, PUT">
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseConfigurationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseConfigurationResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseResource.java" afterDir="false" />
@@ -45,7 +54,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="fa98be85-279c-4737-a818-81a07bae6362" />
+        <option name="accountId" value="7e952b38-4aaa-4bfa-aba5-8c95d2ffc40c" />
         <option name="url" value="https://github.com/DanilloMello/Curso-Quarkus.git" />
       </UrlAndAccount>
     </option>
@@ -107,7 +116,6 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="mappers" />
       <recent name="dto" />
       <recent name="domain" />
       <recent name="" />
@@ -128,10 +136,9 @@
       <recent name="resource" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="dao" />
-      <recent name="services" />
-      <recent name="resources" />
       <recent name="resource" />
+      <recent name="services" />
+      <recent name="dao" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -384,9 +391,6 @@
       <workItem from="1677861414286" duration="972000" />
       <workItem from="1677862637165" duration="8893000" />
       <workItem from="1677894950926" duration="861000" />
-      <workItem from="1677942020829" duration="117000" />
-      <workItem from="1677943615443" duration="4260000" />
-      <workItem from="1678033749743" duration="2280000" />
     </task>
     <task id="LOCAL-00001" summary="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
       <created>1675530732400</created>
