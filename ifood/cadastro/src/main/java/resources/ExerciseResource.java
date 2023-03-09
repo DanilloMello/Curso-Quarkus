@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Path("/exercises")
@@ -19,6 +20,7 @@ public class ExerciseResource {
     ExerciseService exerciseService;
     @GET
     public List<Exercise> listAll() {
+        BigDecimal teste = BigDecimal.ONE.divide(BigDecimal.ZERO);
         return exerciseService.listAll();
     }
     @POST

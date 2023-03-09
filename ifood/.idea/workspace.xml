@@ -4,60 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - testando 5">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5cb4c77916ad80317e0734c11ac06ecd690eb269" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/7006634dc22665889799ef479f5ffed7432a633e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/951e8ce0a5707eba7efb5e1b7c44abc5c1c94bd8" beforeDir="false" />
+    <list default="true" id="461cb1dc-51d6-4140-9258-2f285be6c8ce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/exception/GlobalExceptionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/Workout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/domain/dto/WorkoutDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/domain/dto/WorkoutDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" afterDir="false" />
-    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - Crud GET, POST, PUT">
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseConfigurationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseConfigurationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/exception/ErrorResponse.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseConfigurationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseConfigurationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseConfigurationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseConfigurationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/ExerciseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/services/WorkoutServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="7e952b38-4aaa-4bfa-aba5-8c95d2ffc40c" />
-        <option name="url" value="https://github.com/DanilloMello/Curso-Quarkus.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/cadastro/pom.xml" root0="FORCE_HIGHLIGHTING" />
@@ -65,21 +26,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Ambiente/apache-maven-3.8.7" />
-        <option name="useMavenConfig" value="true" />
-        <option name="usePluginRegistry" value="true" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2KYeARAE7RxJwYe2h3LFpOLDciT" />
+  <component name="ProjectId" id="2MksdwUj7ZaTMHqWZiwcYbvylO8" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -87,75 +34,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ExpandQuarkusEnvironmentOptionsPanel&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Trabalho/Dev/Projetos Teste/quarkus-quickstarts-main/quarkus-quickstarts-main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="dto" />
-      <recent name="domain" />
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\main\resources" />
-      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\main\java\dao" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\teste\resources\datasets" />
-      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\teste\java" />
-      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\teste" />
-    </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="domain" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="resource" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="resource" />
-      <recent name="services" />
-      <recent name="dao" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn clean" />
-      <command value="mvn install" />
-      <command value="mvn compile" />
-    </option>
-  </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="QuarkusRunConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.ExerciseConfigurationResourceTest.shouldRetrieveExerciseConfigurations">
+}]]></component>
+  <component name="RunManager" selected="JUnit.ExerciseResourceTest.shouldRetrieveExercises">
+    <configuration name="All in ifood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ifood" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExerciseConfigurationResourceTest.shouldRetrieveExerciseConfigurations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cadastro" />
       <extension name="coverage">
@@ -180,7 +73,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="resource" />
+      <option name="PACKAGE_NAME" value="resources" />
       <option name="MAIN_CLASS_NAME" value="resources.ExerciseResourceTest" />
       <option name="METHOD_NAME" value="shouldRetrieveExercises" />
       <option name="TEST_OBJECT" value="method" />
@@ -188,302 +81,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExerciseResourceTest.shouldRetrieveWorkouts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cadastro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="resources.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resources.ExerciseResourceTest" />
-      <option name="METHOD_NAME" value="shouldRetrieveWorkouts" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WorkoutResourceTest.shouldRetrievePratosCadastro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cadastro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="resources.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resources.WorkoutResourceTest" />
-      <option name="METHOD_NAME" value="shouldRetrievePratosCadastro" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WorkoutResourceTest.shouldRetrieveWorkouts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cadastro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="resources.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resources.WorkoutResourceTest" />
-      <option name="METHOD_NAME" value="shouldRetrieveWorkouts" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="cadastro" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
-      <module name="cadastro" />
-      <QsMavenRunConfiguration>
-        <MavenSettings>
-          <option name="myGeneralSettings" />
-          <option name="myRunnerSettings" />
-          <option name="myRunnerParameters">
-            <MavenRunnerParameters>
-              <option name="profiles">
-                <set />
-              </option>
-              <option name="goals">
-                <list>
-                  <option value="quarkus:dev" />
-                </list>
-              </option>
-              <option name="pomFileName" value="pom.xml" />
-              <option name="profilesMap">
-                <map />
-              </option>
-              <option name="resolveToWorkspace" value="false" />
-              <option name="workingDirPath" value="$PROJECT_DIR$/cadastro" />
-            </MavenRunnerParameters>
-          </option>
-        </MavenSettings>
-        <targetMavenLocalRepo />
-      </QsMavenRunConfiguration>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="marketplace" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
-      <module name="marketplace" />
-      <QsMavenRunConfiguration>
-        <MavenSettings>
-          <option name="myGeneralSettings" />
-          <option name="myRunnerSettings" />
-          <option name="myRunnerParameters">
-            <MavenRunnerParameters>
-              <option name="profiles">
-                <set />
-              </option>
-              <option name="goals">
-                <list>
-                  <option value="quarkus:dev" />
-                </list>
-              </option>
-              <option name="pomFileName" value="pom.xml" />
-              <option name="profilesMap">
-                <map />
-              </option>
-              <option name="resolveToWorkspace" value="false" />
-              <option name="workingDirPath" value="$PROJECT_DIR$/marketplace" />
-            </MavenRunnerParameters>
-          </option>
-        </MavenSettings>
-        <targetMavenLocalRepo />
-      </QsMavenRunConfiguration>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="pedido" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
-      <module name="pedido" />
-      <QsMavenRunConfiguration>
-        <MavenSettings>
-          <option name="myGeneralSettings" />
-          <option name="myRunnerSettings" />
-          <option name="myRunnerParameters">
-            <MavenRunnerParameters>
-              <option name="profiles">
-                <set />
-              </option>
-              <option name="goals">
-                <list>
-                  <option value="quarkus:dev" />
-                </list>
-              </option>
-              <option name="pomFileName" value="pom.xml" />
-              <option name="profilesMap">
-                <map />
-              </option>
-              <option name="resolveToWorkspace" value="false" />
-              <option name="workingDirPath" value="$PROJECT_DIR$/pedido" />
-            </MavenRunnerParameters>
-          </option>
-        </MavenSettings>
-        <targetMavenLocalRepo />
-      </QsMavenRunConfiguration>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ExerciseConfigurationResourceTest.shouldRetrieveExerciseConfigurations" />
         <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrieveExercises" />
-        <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrieveWorkouts" />
-        <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrieveWorkouts" />
-        <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrievePratosCadastro" />
+        <item itemvalue="JUnit.ExerciseConfigurationResourceTest.shouldRetrieveExerciseConfigurations" />
+        <item itemvalue="JUnit.All in ifood" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="" />
-      <created>1674155800593</created>
+      <changelist id="461cb1dc-51d6-4140-9258-2f285be6c8ce" name="Changes" comment="" />
+      <created>1678323011750</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1674155800593</updated>
-      <workItem from="1674155802104" duration="8059000" />
-      <workItem from="1674218837836" duration="6642000" />
-      <workItem from="1674493478837" duration="10150000" />
-      <workItem from="1674705896140" duration="741000" />
-      <workItem from="1674746820452" duration="5404000" />
-      <workItem from="1674820861291" duration="4806000" />
-      <workItem from="1674859593571" duration="2656000" />
-      <workItem from="1674944188605" duration="611000" />
-      <workItem from="1675006030268" duration="7817000" />
-      <workItem from="1675131491263" duration="500000" />
-      <workItem from="1675296121884" duration="913000" />
-      <workItem from="1675529878445" duration="1577000" />
-      <workItem from="1675626688980" duration="597000" />
-      <workItem from="1675686361637" duration="12679000" />
-      <workItem from="1675869247268" duration="14266000" />
-      <workItem from="1675966417079" duration="4085000" />
-      <workItem from="1676062066976" duration="596000" />
-      <workItem from="1676122637376" duration="7214000" />
-      <workItem from="1676224345995" duration="3544000" />
-      <workItem from="1676233010294" duration="1223000" />
-      <workItem from="1676247940293" duration="1890000" />
-      <workItem from="1676292434510" duration="19912000" />
-      <workItem from="1676340040989" duration="4665000" />
-      <workItem from="1676408914580" duration="1669000" />
-      <workItem from="1676474781136" duration="717000" />
-      <workItem from="1676643719283" duration="10241000" />
-      <workItem from="1676726233122" duration="9644000" />
-      <workItem from="1676743802123" duration="3809000" />
-      <workItem from="1676748059553" duration="996000" />
-      <workItem from="1676756619571" duration="1526000" />
-      <workItem from="1676918377392" duration="5932000" />
-      <workItem from="1677012368434" duration="4630000" />
-      <workItem from="1677086130489" duration="9125000" />
-      <workItem from="1677338122143" duration="3804000" />
-      <workItem from="1677700368504" duration="5597000" />
-      <workItem from="1677706008775" duration="606000" />
-      <workItem from="1677770873050" duration="1892000" />
-      <workItem from="1677857618174" duration="3452000" />
-      <workItem from="1677861097216" duration="92000" />
-      <workItem from="1677861199371" duration="140000" />
-      <workItem from="1677861366684" duration="38000" />
-      <workItem from="1677861414286" duration="972000" />
-      <workItem from="1677862637165" duration="8893000" />
-      <workItem from="1677894950926" duration="861000" />
+      <updated>1678323011750</updated>
     </task>
-    <task id="LOCAL-00001" summary="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
-      <created>1675530732400</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1675530732400</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Sprint teste - testando 2">
-      <created>1676741483797</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1676741483797</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Sprint teste - testando 2">
-      <created>1676742537848</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1676742537848</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Sprint teste - testando 3">
-      <created>1676743851823</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1676743851823</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Sprint teste - testando 4">
-      <created>1676767887172</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1676767887172</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Sprint teste - testando 4">
-      <created>1676768816848</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1676768816848</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Sprint teste - testando 6">
-      <created>1677700535646</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1677700535646</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Sprint teste - testando 10">
-      <created>1677942141680</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1677942141680</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Sprint teste - Crud GET, POST, PUT">
-      <created>1678033968408</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1678033968408</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc" />
-    <MESSAGE value="Sprint teste - testando 2" />
-    <MESSAGE value="Sprint teste - testando 3" />
-    <MESSAGE value="Sprint teste - testando 4" />
-    <MESSAGE value="Sprint teste - testando 6" />
-    <MESSAGE value="Sprint teste - testando 10" />
-    <MESSAGE value="Sprint teste - Crud GET, POST, PUT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - Crud GET, POST, PUT" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
