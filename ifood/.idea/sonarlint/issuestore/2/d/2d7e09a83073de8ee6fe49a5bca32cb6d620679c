@@ -1,0 +1,13 @@
+
+t
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "testes".(êöŸ«
+p
+java:S3252"ZUse static access with "io.quarkus.hibernate.orm.panache.PanacheEntityBase" for "listAll".(êöŸ«
+u
+java:S3252"ZUse static access with "io.quarkus.hibernate.orm.panache.PanacheEntityBase" for "persist".(ãÁŒ‡øÿÿÿÿ
+\
+java:S1128":Remove this unused import 'javax.net.ssl.SSLEngineResult'.(‡Şûÿÿÿÿ8ßÁëÎê0
+X
+java:S1128"6Remove this unused import 'javax.ws.rs.core.Response'.(ˆäĞæüÿÿÿÿ8àÁëÎê0
+Z
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8àÁëÎê0

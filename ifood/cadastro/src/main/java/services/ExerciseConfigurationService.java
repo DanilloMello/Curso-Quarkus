@@ -10,6 +10,5 @@ public interface ExerciseConfigurationService {
     List<ExerciseConfiguration> listAll();
     Response create(ExerciseConfigurationDTO dto);
     Response update(ExerciseConfigurationDTO dto);
-
     Response delete(Long id);
 }
