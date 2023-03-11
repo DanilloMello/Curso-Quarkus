@@ -9,6 +9,7 @@ import mappers.WorkoutMapper;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 import javax.ws.rs.core.Response;
 import java.net.URI;
 import java.util.List;
@@ -25,6 +26,10 @@ public class WorkoutServiceImpl implements WorkoutService {
     @Override
     public List<Workout> listAll() {
         return Workout.listAll();
+    }
+    @Override
+    public List<Workout> findById(Long id) {
+        return Workout.findById(id);
     }
     @Override
     public Response create(WorkoutDTO dto) {
@@ -57,5 +62,6 @@ public class WorkoutServiceImpl implements WorkoutService {
                 Workout.deleteById(workout) ? Response.ok().build() : Response.status(NOT_FOUND).build()
                 : Response.status(NOT_FOUND).build();
     }
+
 
 }

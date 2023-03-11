@@ -19,7 +19,7 @@ public class Workout extends PanacheEntityBase {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "workout_sequence")
     @SequenceGenerator(name = "workout_sequence", sequenceName = "workout_seq", allocationSize = 1)
     public Long id;
-    public String nome;
+    public String name;
     @CreationTimestamp
     @Column(name = "creationDate")
     public LocalDateTime creationDate;

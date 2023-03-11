@@ -20,7 +20,6 @@ public class ExerciseResource {
     ExerciseService exerciseService;
     @GET
     public List<Exercise> listAll() {
-        BigDecimal teste = BigDecimal.ONE.divide(BigDecimal.ZERO);
         return exerciseService.listAll();
     }
     @POST

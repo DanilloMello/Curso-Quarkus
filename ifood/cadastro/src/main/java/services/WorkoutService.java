@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface WorkoutService {
     List<Workout> listAll();
+    List<Workout> findById(Long id);
     Response create(WorkoutDTO workout);
     Response update(WorkoutDTO workoutDTO);
     Response delete(Long id);

@@ -6,12 +6,11 @@ import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 import services.WorkoutService;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-
-import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
 
 @Path("/workouts")
 @Produces(MediaType.APPLICATION_JSON)
@@ -23,8 +22,14 @@ public class WorkoutResource {
     public List<Workout> listAll() {
         return workoutService.listAll();
     }
+    @GET
+    @Path("{id}")
+    public List<Workout> findById(@PathParam("id") Long id) {
+        return workoutService.findById(id);
+    }
     @POST
-    public Response create(@RequestBody WorkoutDTO workoutDto) {
+    public Response create(@Valid @RequestBody WorkoutDTO workoutDto) {
+        Integer teste = 1/0;
         return workoutService.create(workoutDto);
     }
     @PUT
