@@ -1,7 +1,7 @@
 package services;
 
-import domain.ExerciseConfiguration;
-import domain.dto.ExerciseConfigurationDTO;
+import infra.domain.ExerciseConfiguration;
+import infra.domain.dto.ExerciseConfigurationDTO;
 
 import javax.ws.rs.core.Response;
 import java.util.List;

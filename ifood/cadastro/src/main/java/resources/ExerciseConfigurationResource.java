@@ -1,7 +1,7 @@
 package resources;
 
-import domain.ExerciseConfiguration;
-import domain.dto.ExerciseConfigurationDTO;
+import infra.domain.ExerciseConfiguration;
+import infra.domain.dto.ExerciseConfigurationDTO;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 import services.ExerciseConfigurationService;
 

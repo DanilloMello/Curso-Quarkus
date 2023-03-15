@@ -1,7 +1,7 @@
 package resources;
 
-import domain.Exercise;
-import domain.dto.ExerciseDTO;
+import infra.domain.Exercise;
+import infra.domain.dto.ExerciseDTO;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 import services.ExerciseService;
 
@@ -9,7 +9,6 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.math.BigDecimal;
 import java.util.List;
 
 @Path("/exercises")

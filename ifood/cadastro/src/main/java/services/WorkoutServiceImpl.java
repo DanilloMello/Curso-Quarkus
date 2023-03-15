@@ -1,15 +1,12 @@
 package services;
 
-import domain.Exercise;
-import domain.Workout;
-import domain.dto.WorkoutDTO;
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import mappers.WorkoutMapper;
+import infra.domain.Workout;
+import infra.domain.dto.WorkoutDTO;
+import infra.mappers.WorkoutMapper;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
-import javax.validation.Valid;
 import javax.ws.rs.core.Response;
 import java.net.URI;
 import java.util.List;
@@ -47,7 +44,7 @@ public class WorkoutServiceImpl implements WorkoutService {
                 .map(
                         w -> {
                             Workout workout = (Workout) w;
-                            workout.setNome(workoutDTO.getName());
+                            workout.setName(workoutDTO.getName());
                             workout.persist();
                             return workout.isPersistent() ?
                                     Response.ok(workout).build() :

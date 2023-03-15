@@ -1,7 +1,7 @@
 package services;
 
-import domain.Workout;
-import domain.dto.WorkoutDTO;
+import infra.domain.Workout;
+import infra.domain.dto.WorkoutDTO;
 
 import javax.ws.rs.core.Response;
 import java.util.List;

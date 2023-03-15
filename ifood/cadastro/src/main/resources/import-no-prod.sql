@@ -1,6 +1,6 @@
 
 -- Workout 1
-insert into workout (id, creationdate, nome, updatedate)
+insert into workout (id, creationdate, name, updatedate)
 values (nextval('workout_seq'), '2023-02-21 00:00:00', 'Treino A', '2023-02-21 00:00:00');
     -- Exercise 1
 insert into exercise (id, creationdate, name, updatedate, workout_id)
@@ -9,7 +9,7 @@ insert into exercise_configuration (id, cadence, method, rangeofmotion, restbetw
 values (nextval('exercise_configuration_seq'), '2020', 'DROPSET', 30, 30, 30, 30, 3, 30, 1);
 --
 -- Workout 2
-insert into workout (id, creationdate, nome, updatedate)
+insert into workout (id, creationdate, name, updatedate)
 values (nextval('workout_seq'), '2023-02-21 00:00:00', 'Treino A', '2023-02-21 00:00:00');
 --
     -- Exercise 2

@@ -1,9 +1,9 @@
 package services;
 
-import domain.Exercise;
-import domain.Workout;
-import domain.dto.ExerciseDTO;
-import mappers.ExerciseMapper;
+import infra.domain.Exercise;
+import infra.domain.Workout;
+import infra.domain.dto.ExerciseDTO;
+import infra.mappers.ExerciseMapper;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
