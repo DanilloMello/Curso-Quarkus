@@ -1,9 +1,19 @@
 services:
   postgres_cadastro:
     container_name: postgres_cadastro_fiqfit_Workout
-    image: postgres:12.2
+    image: postgres:15.1
     environment:
       POSTGRES_USER: cadastro
       POSTGRES_PASSWORD: cadastro
     ports:
       - 5432:5432
+  keycloak_fiqfit:
+    container_name: keycloak_fiqfit_Workout
+    image: quay.io/keycloak/keycloak:21.0.1
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - 8081:8080
+    command:
+      - start-dev

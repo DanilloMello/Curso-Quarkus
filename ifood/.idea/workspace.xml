@@ -4,17 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint teste - Crud DELETE">
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/exceptions/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/exceptions/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadastro/src/main/java/exceptions/GlobalExpectionMapper.java" afterDir="false" />
+    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint error teste">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_03_2023_17_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_03_2023_17_06__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/5/e560014e503a37f1213107ce01a7b6f315a93b13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff5a48e6d64e02cd0344870a4eae2308f3a173c8" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,10 +43,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
+        &quot;lastFilter&quot;: {
+        &quot;state&quot;: &quot;OPEN&quot;
+        }
+        }</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -77,22 +86,25 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ExpandQuarkusEnvironmentOptionsPanel&quot;: &quot;true&quot;,
+    &quot;JavaClassFindUsagesOptions.isDerivedClasses&quot;: &quot;true&quot;,
+    &quot;JavaClassFindUsagesOptions.isSearchForTextOccurrences&quot;: &quot;false&quot;,
+    &quot;JavaClassFindUsagesOptions.isUsages&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Trabalho/Dev/Projetos Teste/quarkus-quickstarts-main/quarkus-quickstarts-main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Trabalho/Dev/Projetos/ifood/cadastro/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4413793&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.intentionPowerPack&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -103,20 +115,22 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="infra.validators" />
       <recent name="exceptions" />
       <recent name="mappers" />
       <recent name="dto" />
       <recent name="domain" />
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\main\resources" />
       <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\main\java\dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\teste\resources\datasets" />
-      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\teste\java" />
-      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\teste" />
+      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\main\resources" />
+      <recent name="C:\Trabalho\Dev\Projetos\ifood\cadastro\src\main\java\infra\exceptions" />
+      <recent name="C:\Trabalho\Dev\Projetos\ifood" />
+      <recent name="C:\Trabalho\Dev\Projetos\ifood\src" />
+      <recent name="C:\Trabalho\Dev\Projetos\ifood\src\main\resources" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="domain" />
@@ -145,7 +159,15 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ExerciseConfigurationResourceTest.shouldRetrieveExerciseConfigurations">
+  <component name="RunManager" selected="Maven.cadastro [quarkus:dev]">
+    <configuration name="All in cadastro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadastro" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExerciseConfigurationResourceTest.shouldRetrieveExerciseConfigurations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cadastro" />
       <extension name="coverage">
@@ -194,22 +216,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorkoutResourceTest.shouldRetrievePratosCadastro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cadastro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="resources.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="resource" />
-      <option name="MAIN_CLASS_NAME" value="resources.WorkoutResourceTest" />
-      <option name="METHOD_NAME" value="shouldRetrievePratosCadastro" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WorkoutResourceTest.shouldRetrieveWorkouts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cadastro" />
       <extension name="coverage">
@@ -225,6 +231,31 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="cadastro [quarkus:dev]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="quarkus:dev" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/cadastro" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="cadastro" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
       <module name="cadastro" />
@@ -319,17 +350,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.All in cadastro" />
+      <item itemvalue="JUnit.ExerciseConfigurationResourceTest.shouldRetrieveExerciseConfigurations" />
+      <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrieveExercises" />
+      <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrieveWorkouts" />
+      <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrieveWorkouts" />
+      <item itemvalue="Maven.cadastro [quarkus:dev]" />
+      <item itemvalue="Quarkus.cadastro" />
+      <item itemvalue="Quarkus.marketplace" />
+      <item itemvalue="Quarkus.pedido" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ExerciseConfigurationResourceTest.shouldRetrieveExerciseConfigurations" />
         <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrieveExercises" />
         <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrieveWorkouts" />
+        <item itemvalue="JUnit.All in cadastro" />
+        <item itemvalue="JUnit.ExerciseConfigurationResourceTest.shouldRetrieveExerciseConfigurations" />
         <item itemvalue="JUnit.ExerciseResourceTest.shouldRetrieveWorkouts" />
-        <item itemvalue="JUnit.WorkoutResourceTest.shouldRetrievePratosCadastro" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Danil\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="" />
@@ -386,6 +431,18 @@
       <workItem from="1678033749743" duration="2302000" />
       <workItem from="1678106219204" duration="15553000" />
       <workItem from="1678191781217" duration="1327000" />
+      <workItem from="1678394926548" duration="2780000" />
+      <workItem from="1678548299863" duration="15200000" />
+      <workItem from="1678649192664" duration="7587000" />
+      <workItem from="1678677474104" duration="5742000" />
+      <workItem from="1678742305223" duration="1192000" />
+      <workItem from="1678797181427" duration="12569000" />
+      <workItem from="1678840317804" duration="847000" />
+      <workItem from="1678882210960" duration="596000" />
+      <workItem from="1678923745880" duration="4424000" />
+      <workItem from="1678999906807" duration="3465000" />
+      <workItem from="1679009572944" duration="621000" />
+      <workItem from="1679161926880" duration="687000" />
     </task>
     <task id="LOCAL-00001" summary="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
       <created>1675530732400</created>
@@ -457,7 +514,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678036046939</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Sprint error teste">
+      <created>1678395010233</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678395010234</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Sprint error teste">
+      <created>1678564865128</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678564865128</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +554,19 @@
     <MESSAGE value="Sprint teste - testando 10" />
     <MESSAGE value="Sprint teste - Crud GET, POST, PUT" />
     <MESSAGE value="Sprint teste - Crud DELETE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint teste - Crud DELETE" />
+    <MESSAGE value="Sprint error teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sprint error teste" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cadastro/src/main/java/exceptions/ConstraintViolationException.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
