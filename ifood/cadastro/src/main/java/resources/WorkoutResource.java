@@ -4,6 +4,7 @@ import infra.domain.Workout;
 import infra.domain.dto.WorkoutDTO;
 import infra.exceptions.ConstraintViolationResponse;
 import infra.exceptions.GenericErrorResponse;
+import org.eclipse.microprofile.auth.LoginConfig;
 import org.eclipse.microprofile.openapi.annotations.enums.SecuritySchemeType;
 import org.eclipse.microprofile.openapi.annotations.media.Content;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
@@ -13,6 +14,7 @@ import org.eclipse.microprofile.openapi.annotations.security.*;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import services.WorkoutService;
 
+import javax.annotation.security.DeclareRoles;
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -26,12 +28,6 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 @Tag(name= "Workout Resource", description = "Basic CRUD to Workout data")
 @RolesAllowed("trainer")
-@SecurityScheme(
-        securitySchemeName = "fiqfit_workout-oauth",
-        type = SecuritySchemeType.OAUTH2,
-        flows = @OAuthFlows(
-                password = @OAuthFlow(tokenUrl = "http://localhost:8081/auth/realms/fiqfit_workout/protocol/openid-connect/token")))
-@SecurityRequirement(name = "fiqfit_workout")
 public class WorkoutResource {
     @Inject
     WorkoutService workoutService;
@@ -39,6 +35,7 @@ public class WorkoutResource {
     @APIResponse(responseCode = "201", description = "When all Workouts are successfully retrieved!")
     @APIResponse(responseCode = "400", content = @Content(schema = @Schema(allOf = ConstraintViolationResponse.class)))
     @APIResponse(responseCode = "500", content = @Content(schema = @Schema(implementation = GenericErrorResponse.class)))
+//    @RolesAllowed({"admin,trainer"})
     public List<Workout> listAll() {
         return workoutService.listAll();
     }
