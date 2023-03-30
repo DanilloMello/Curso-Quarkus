@@ -3,8 +3,6 @@ Z
 *cadastro/src/main/docker/Dockerfile.native,b\2\b2cee37e982f33389ada0c85430ca39f485ca48b
 `
 0cadastro/src/main/docker/Dockerfile.native-micro,2\3\234f5b70fc6d50f2bd8152fcb73bf21f72342f3c
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 F
 cadastro/.dockerignore,7\a\7af571fd84d0f19cd67e081baf7bdb14b9724722
 C
@@ -47,8 +45,6 @@ p
 @cadastro/src/main/java/daos/ExerciseConfigurationRepository.java,2\9\293b148af09c5967a3b83bb5776ab2adf10ae584
 t
 Dcadastro/src/main/java/daos/ExerciseConfigurationRepositoryImpl.java,e\f\efc197cf9a09b8683b42bf627d73dedaeb15c7b4
-s
-Ccadastro/src/main/java/resources/ExerciseConfigurationResource.java,8\b\8b15ba69977f7e475ea956a5e0e226316fc0ebd0
 q
 Acadastro/src/main/java/services/ExerciseConfigurationService.java,c\7\c7d2409d9c3d296781d6e388db0c9e8edd24cc3b
 u
@@ -61,8 +57,6 @@ c
 3cadastro/src/main/java/daos/ExerciseRepository.java,1\a\1a1c7e2dc8ad8b8d1fe983fe78833c3bf70954f3
 g
 7cadastro/src/main/java/daos/ExerciseRepositoryImpl.java,2\c\2c4dc9277c919c4807430c139c0b807a19dde5c2
-f
-6cadastro/src/main/java/resources/ExerciseResource.java,f\7\f7df5a67c1d73a201cbdd95d1e918c89c81da81b
 d
 4cadastro/src/main/java/services/ExerciseService.java,7\0\7006634dc22665889799ef479f5ffed7432a633e
 h
@@ -99,3 +93,9 @@ i
 9cadastro/src/main/java/infra/validators/DTOValidator.java,c\f\cf764d4e9ce405957a7cbaa9a06dcf67b688a1f7
 g
 7cadastro/src/main/java/infra/domain/dto/WorkoutDTO.java,e\3\e3de8b9a273ce3e54c1b040b591e4ec71132f2f1
+
+O.idea/shelf/Uncommitted_changes_before_Update_at_04_03_2023_17_06__Changes_.xml,c\d\cde6977dd945259f30a1c0be61f4ad5294ef6e9c
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+j
+:cadastro/src/main/java/infra/config/ApplicationConfig.java,8\2\825dc1c22720c03144c6ff48c4e9775658a08257

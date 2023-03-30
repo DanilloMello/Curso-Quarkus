@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="Sprint error teste">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_03_2023_17_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_03_2023_17_06__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/5/e560014e503a37f1213107ce01a7b6f315a93b13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff5a48e6d64e02cd0344870a4eae2308f3a173c8" beforeDir="false" />
+    <list default="true" id="cded1e22-55f8-4cff-9863-3b4d8fcae317" name="Changes" comment="jwt teste 2">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseConfigurationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseConfigurationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/ExerciseResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/java/resources/WorkoutResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
@@ -95,7 +94,7 @@
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Trabalho/Dev/Projetos/ifood/cadastro/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Trabalho/Dev/Projetos Teste/quarkus-keycloak&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -442,7 +441,19 @@
       <workItem from="1678923745880" duration="4424000" />
       <workItem from="1678999906807" duration="3465000" />
       <workItem from="1679009572944" duration="621000" />
-      <workItem from="1679161926880" duration="687000" />
+      <workItem from="1679161926880" duration="934000" />
+      <workItem from="1679179464485" duration="2866000" />
+      <workItem from="1679244945112" duration="4805000" />
+      <workItem from="1679356096249" duration="46000" />
+      <workItem from="1679532422305" duration="609000" />
+      <workItem from="1679668966896" duration="1480000" />
+      <workItem from="1679750339774" duration="10993000" />
+      <workItem from="1679929928022" duration="6448000" />
+      <workItem from="1679943733253" duration="2940000" />
+      <workItem from="1679966465018" duration="725000" />
+      <workItem from="1680007165340" duration="12615000" />
+      <workItem from="1680093343910" duration="875000" />
+      <workItem from="1680180916065" duration="4914000" />
     </task>
     <task id="LOCAL-00001" summary="Curso Quarkus - Aula DTO - Transferindo estado atual do projeto para outro pc">
       <created>1675530732400</created>
@@ -528,7 +539,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678564865128</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="jwt teste">
+      <created>1679162899842</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679162899842</updated>
+    </task>
+    <task id="LOCAL-00014" summary="jwt teste 2">
+      <created>1679356133679</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1679356133679</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +580,9 @@
     <MESSAGE value="Sprint teste - Crud GET, POST, PUT" />
     <MESSAGE value="Sprint teste - Crud DELETE" />
     <MESSAGE value="Sprint error teste" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint error teste" />
+    <MESSAGE value="jwt teste" />
+    <MESSAGE value="jwt teste 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="jwt teste 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

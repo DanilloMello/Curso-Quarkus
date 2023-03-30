@@ -2,6 +2,7 @@ package resources;
 
 import infra.domain.Exercise;
 import infra.domain.dto.ExerciseDTO;
+import io.quarkus.security.Authenticated;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 import services.ExerciseService;
 
